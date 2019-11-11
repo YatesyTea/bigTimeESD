@@ -18,12 +18,13 @@
                 String verified = (String) request.getAttribute("verify");
                 if (Boolean.parseBoolean(verified)) {
                     out.print("Login Succeeded");
-                } else {
+                } 
+                else {
                     out.print("Login Failed");
                 }
             %>
     <html><body>
-            <a href=checkcookie.do>click here</a>
+            <!--<a href=checkcookie.do>click here</a>-->
         </body></html>
 </body>
 
