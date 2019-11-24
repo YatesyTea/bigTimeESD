@@ -6,7 +6,7 @@ and open the template in the editor.
 -->
 <html>
     <head>
-        <title>XYZ Association</title>
+        <title>XYZ Claims System</title>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         
@@ -33,13 +33,19 @@ and open the template in the editor.
     
     </head>
     <body style="background-color: teal">
-        <div><p style="color: white; font-family: Verdana; font-size: 20px; text-align: center">WELCOME TO XYZ ASSOCIATION LOG IN</p></div>
-        <form method="post" action="AuthenticateUser.do"><p style="text-align:center">
-            <br /><label id="textid">Name:</label><br />
-            <input id="textboxid" type="text" name="name">
-            <br /><label id="textid">Pass: </label><br />
-            <input id="textboxid" type="password" name="pass"><br />
-            <br><input type="SUBMIT" value="Log In" style="color: royalblue">
-        </p></form>
+        <div>
+            <p style="color: white; font-family: Verdana; font-size: 20px; text-align: center">XYZ Homepage</p>
+        </div>
+        <form method="post" action="AuthenticateUser.do">
+            <!-- <p style="text-align:center">
+                <br /><label id="textid">Name:</label><br />
+                <input id="textboxid" type="text" name="name">
+                <br /><label id="textid">Pass: </label><br />
+                <input id="textboxid" type="password" name="pass"><br />
+                <br><input type="SUBMIT" value="Log In" style="color: royalblue">
+            </p> -->
+            <a href=login_page name="login_button" style="color: black;">Login</a><br/><br/>
+            <a href=reg_page name="reg_button" style="color: black;">Register</a>
+        </form>
     </body>
 </html>
