@@ -9,6 +9,14 @@
         <url-pattern>/AuthenticateUser.do</url-pattern>
     </servlet-mapping>
     <servlet>
+        <servlet-name>RegistrationController</servlet-name>
+        <servlet-class>controller.RegistrationController</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>RegistrationController</servlet-name>
+        <url-pattern>/RegisterUser.do</url-pattern>
+    </servlet-mapping>
+    <servlet>
         <servlet-name>CheckCookie</servlet-name>
         <servlet-class>controller.CheckCookie</servlet-class>
     </servlet>
