@@ -30,7 +30,7 @@ public class DBBean {
         try {
             // You will need to explicitly load this driver in a web app
             Class.forName("org.apache.derby.jdbc.ClientDriver");
-            con = DriverManager.getConnection("jdbc:derby://localhost:1527/SampleDB", "j3", "j3");
+            con = DriverManager.getConnection("jdbc:derby://localhost:1527/student", "pass", "pass");
             state = con.createStatement();
             rs = state.executeQuery(query);
             ResultSetMetaData rsmd = rs.getMetaData();
