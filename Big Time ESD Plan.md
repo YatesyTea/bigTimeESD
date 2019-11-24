@@ -4,8 +4,8 @@
 
 ## Table of Contents
 
-1. [Actors](##actors)
-2. [Feature List](##feature-list)
+1. [Actors](#actors)
+2. [Feature List](#feature-list)
    1. [Feature 1: Main Home Page](##feature-1:-main-home-page)
    2. [Feature 2: Login Page](##feature-2:-login-page)
    3. [Feature 3: Registration](##feature-3:-registration-page)
@@ -14,7 +14,7 @@
    6. [Feature 6: Admin User Dashboard](##feature-6:-admin-user-dashboard)
    7. [Feature 7: Claim Eligibility](##feature-7:-claim-eligibility)
 3. [User Stories](#user-stories)
-4. [Member Preferences](#member-preferences)
+4. [Member Preferences](#member-preferences-for-mvc)
 
 
 
