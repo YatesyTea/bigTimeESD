@@ -24,9 +24,33 @@
         <servlet-name>CheckCookie</servlet-name>
         <url-pattern>/checkcookie.do</url-pattern>
     </servlet-mapping>
+    <servlet>
+        <servlet-name>ShowMemberInfo</servlet-name>
+        <servlet-class>controller.ShowMemberInfo</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>ShowMemberInfo</servlet-name>
+        <url-pattern>/ShowMemberInfo.do</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>MakeClaimController</servlet-name>
+        <url-pattern>/MakeClaimController.do</url-pattern>
+    </servlet-mapping>
+    <servlet>
+        <servlet-name>MakeClaimController</servlet-name>
+        <servlet-class>controller.MakeClaimController</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>MakePaymentController</servlet-name>
+        <url-pattern>/MakePaymentController.do</url-pattern>
+    </servlet-mapping>
+    <servlet>
+        <servlet-name>MakePaymentController</servlet-name>
+        <servlet-class>controller.MakePaymentController</servlet-class>
+    </servlet>
     <session-config>
         <session-timeout>
-            30
+            20
         </session-timeout>
     </session-config>
 </web-app>

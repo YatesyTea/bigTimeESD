@@ -9,6 +9,7 @@ import java.io.IOException;
 import javax.servlet.*;
 import javax.servlet.http.*;
 import model.AuthenticatorBean;
+import model.User;
 
 /**
  *
@@ -77,6 +78,10 @@ public class AuthenticateUser extends HttpServlet {
         
         response.addCookie(cookie);
         */
+        User user = new User(name, s);
+        HttpSession session = request.getSession();
+        session.setAttribute("status", user);
+        
         request.setAttribute("verify", s);
         RequestDispatcher view = request.getRequestDispatcher("loginView.jsp");
         view.forward(request, response);
