@@ -253,25 +253,41 @@ What is it meant to take and reject?
 
 **Input:** Non-existing username and password then click login.
 **Expected output:** Stays on page plus displays "Error: Incorrect username and/or password, please try again."
-**Actual Output:**
+**Actual Output:** Recognises the login fails however doesn't provide error message on failure, instead logs them in
+
+![image-20191125152012177](C:\Users\joshp\AppData\Roaming\Typora\typora-user-images\image-20191125152012177.png)
+
+![image-20191125152039943](C:\Users\joshp\AppData\Roaming\Typora\typora-user-images\image-20191125152039943.png)
 
 ### Case 2
 
 **Input:** Valid Pending Member Username and Password, then click login.
 **Expected output:** Takes you to the Pending Dashboard
-**Actual Output:**
+**Actual Output:** member logs in however no pending screen
+
+![image-20191125152301631](C:\Users\joshp\AppData\Roaming\Typora\typora-user-images\image-20191125152301631.png)
+
+![image-20191125152345232](C:\Users\joshp\AppData\Roaming\Typora\typora-user-images\image-20191125152345232.png)
 
 ### Case 3
 
 **Input:** Valid Member Username and Password, then click login.
 **Expected output:** Takes you to the Member Dashboard
-**Actual Output:**
+**Actual Output:** Member logs in successfully 
+
+![image-20191125153648443](C:\Users\joshp\AppData\Roaming\Typora\typora-user-images\image-20191125153648443.png)
+
+![image-20191125153717972](C:\Users\joshp\AppData\Roaming\Typora\typora-user-images\image-20191125153717972.png)
 
 ### Case 4
 
 **Input:** Valid Admin Username and Password, then click login.
 **Expected output:** Takes you to the Admin Dashboard
-**Actual Output:**
+**Actual Output:** Successfully recognises admin but doesn't go to admin page
+
+![image-20191125151823900](C:\Users\joshp\AppData\Roaming\Typora\typora-user-images\image-20191125151823900.png)
+
+![image-20191125151911967](C:\Users\joshp\AppData\Roaming\Typora\typora-user-images\image-20191125151911967.png)
 
 ## Feature 3 Black Box Test
 
