@@ -176,19 +176,9 @@ Controller
 
 ​	Only displays if the claims are made  by someone of longer membership of 6 months
 
-## Feature 9: Pending Member Dashboard
-
-Images to fill whitespace
-
-Displays page with text "Your membership is pending"
-
-View:
 
 
-
-Controller:
-
-## Feature 10: Claim Application
+## Feature 9: Claim Application
 
 
 
@@ -255,6 +245,52 @@ What is it meant to take and reject?
 
 #### For Controller
 
+
+
+## Feature 2 Black Box Test
+
+### Case 1
+
+**Input:** Non-existing username and password then click login.
+**Expected output:** Stays on page plus displays "Error: Incorrect username and/or password, please try again."
+**Actual Output:**
+
+### Case 2
+
+**Input:** Valid Pending Member Username and Password, then click login.
+**Expected output:** Takes you to the Pending Dashboard
+**Actual Output:**
+
+### Case 3
+
+**Input:** Valid Member Username and Password, then click login.
+**Expected output:** Takes you to the Member Dashboard
+**Actual Output:**
+
+### Case 4
+
+**Input:** Valid Admin Username and Password, then click login.
+**Expected output:** Takes you to the Admin Dashboard
+**Actual Output:**
+
+## Feature 3 Black Box Test
+
+Inputs: Name (Varchar,32 ), Address (Varchar, 128), Date of Birth (Date format: YYYY-MM-DD), Date of Registration (Date format: YYY-MM-DD)
+
+### Case 1
+
+**Input:** Name null, all others within acceptable limits, then click 'register' button.
+**Expected output:** Stays on page, with all inputs still present and displays error message of: "Error: Name not valid"
+**Actual Output:**
+
+
+
+### Case 2
+
+**Input:** Name longer than 32 characters, all others within acceptable limits then click 'register' button.
+**Expected output:** Stays on page, with all inputs still present and displays error message of: "Error: Name not valid"
+**Actual Output:**
+
 ---
 
 # Member Preferences
@@ -275,21 +311,23 @@ Josh: Any
 
 ```mermaid
 graph LR
-A(Home) --> B(Login)
+A --> 2(Reg)
+A[Home] --> B(Login)
 	B --> D(Member Dashboard)
 		D --> F(Manage Claims)
 		D --> G(Payment Options)
 	
-    B --> Z(pending dashboard)
+    
     
 	B --> E(Admin Dashboard)
 		E --> H(Approve Users)
 		E --> I(View User Database)
 		E --> J(Approve Claims)
 		
-	
-		
-A --> C(Reg)
+B --> Z(Pending Dashboard)
+
+
+
 	
 ```
 
