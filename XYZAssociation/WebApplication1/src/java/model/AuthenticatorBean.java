@@ -24,16 +24,16 @@ public class AuthenticatorBean {
 
     public String login(String name, String pass) {
         //StringBuilder sb = new StringBuilder();
-        ArrayList<String> result = new ArrayList<String>();
+        ArrayList<User> result = new ArrayList<User>();
 
-        DBBean db = new DBBean();
+        DBUserBean db = new DBUserBean();
         //sb.append(db.doQuery("SELECT * FROM USERS WHERE ID = '" + name+ "' AND PASSWORD = '"+pass+"'"));
         result = db.doQuery("SELECT * FROM USERS WHERE ID = '" + name + "' AND PASSWORD = '" + pass + "'");
         //if (!sb.toString().equalsIgnoreCase("")) {
         //    return sb.toString();
         //}
         if (!result.isEmpty()) {
-            return result.get(2);
+            return result.get(0).getStatus();
         }
         return "Failed";
     }

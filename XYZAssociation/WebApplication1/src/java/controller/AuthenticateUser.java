@@ -78,7 +78,7 @@ public class AuthenticateUser extends HttpServlet {
         
         response.addCookie(cookie);
         */
-        User user = new User(name, s);
+        User user = new User(name, s, pass);
         HttpSession session = request.getSession();
         session.setAttribute("status", user);
         

@@ -12,9 +12,12 @@ package model;
 public class User {
     private String name = "";
     private String status = "";
-    public User(String name, String status) {
+    private String password = "";
+    
+    public User(String name, String status, String password) {
         this.name = name;
         this.status = status;
+        this.password = password;
         
     }
 
@@ -32,5 +35,13 @@ public class User {
 
     public void setStatus(String status) {
         this.status = status;
+    }
+    
+    public String getPassword() {
+        return password;
+    }
+
+    public void setPassword(String password) {
+        this.password = password;
     }
 }

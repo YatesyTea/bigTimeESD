@@ -4,6 +4,8 @@
     Author     : joshp
 --%>
 
+<%@page import="java.util.ArrayList"%>
+<%@page import="model.Claim"%>
 <%@page import="model.User"%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
@@ -18,6 +20,12 @@
         <%          
                 User user = (User)session.getAttribute("status");
                 out.println(user.getName());
+            %>
+            
+        <%
+                //ArrayList<Claim> claim = (ArrayList<Claim>) request.getAttribute("claimsList");
+                String s = (String) request.getAttribute("claimsList");
+                out.print(s);
             %>
             
     </body>
