@@ -12,7 +12,7 @@
    5. [Feature 5: Member Dashboard](#feature-5-member-dashboard)
    6. [Feature 6: Admin User Dashboard](#feature-6-admin-user-dashboard)
    7. [Feature 7: Session Creation](#feature-7-session-creation)
-   8. [Feature 8: Claim Eligibility](# feature-8-claim-eligibility)
+   8. [Feature 8: Claim Eligibility](#feature-8-claim-eligibility)
 4. [Test Plan](#test-plan)
    1. [Types of Testing](#types-of-testing)
    2. [Feature 1 Tests](#feature-1-tests)
