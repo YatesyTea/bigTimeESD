@@ -7,23 +7,16 @@ package controller;
 
 import java.io.IOException;
 import java.io.PrintWriter;
-import java.sql.SQLException;
-import java.util.logging.Level;
-import java.util.logging.Logger;
-import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
-import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
-import model.RegisterBean;
 
 /**
  *
  * @author joshp
  */
-@WebServlet(name = "registrationController", urlPatterns = {"/registrationController"})
-public class RegistrationController extends HttpServlet {
+public class MakeClaimController extends HttpServlet {
 
     /**
      * Processes requests for both HTTP <code>GET</code> and <code>POST</code>
@@ -34,8 +27,21 @@ public class RegistrationController extends HttpServlet {
      * @throws ServletException if a servlet-specific error occurs
      * @throws IOException if an I/O error occurs
      */
-    protected void processRequest(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+    protected void processRequest(HttpServletRequest request, HttpServletResponse response)
+            throws ServletException, IOException {
         response.setContentType("text/html;charset=UTF-8");
+        try (PrintWriter out = response.getWriter()) {
+            /* TODO output your page here. You may use following sample code. */
+            out.println("<!DOCTYPE html>");
+            out.println("<html>");
+            out.println("<head>");
+            out.println("<title>Servlet MakeClaimController</title>");            
+            out.println("</head>");
+            out.println("<body>");
+            out.println("<h1>Servlet MakeClaimController at " + request.getContextPath() + "</h1>");
+            out.println("</body>");
+            out.println("</html>");
+        }
     }
 
     // <editor-fold defaultstate="collapsed" desc="HttpServlet methods. Click on the + sign on the left to edit the code.">
@@ -51,8 +57,6 @@ public class RegistrationController extends HttpServlet {
     protected void doGet(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
         processRequest(request, response);
-        RequestDispatcher view = request.getRequestDispatcher("registrationView.jsp");
-        view.forward(request, response);
     }
 
     /**
@@ -66,22 +70,7 @@ public class RegistrationController extends HttpServlet {
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-        
-        response.setContentType("text/html");
-        RegisterBean reg = new RegisterBean();
-        String name = request.getParameter("name");
-        String pass1 = request.getParameter("pass1");
-        String pass2 = request.getParameter("pass2");
-        
-        try {
-            String s = reg.createAccount(name, pass1, pass2);
-        } catch (SQLException ex) {
-            Logger.getLogger(RegistrationController.class.getName()).log(Level.SEVERE, null, ex);
-        }
-        
-        RequestDispatcher view = request.getRequestDispatcher("index.html");
-        view.forward(request, response);
-        
+        processRequest(request, response);
     }
 
     /**
@@ -93,4 +82,5 @@ public class RegistrationController extends HttpServlet {
     public String getServletInfo() {
         return "Short description";
     }// </editor-fold>
+
 }
