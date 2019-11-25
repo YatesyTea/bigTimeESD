@@ -275,7 +275,21 @@ What is it meant to take and reject?
 
 ## Feature 3 Black Box Test
 
+Inputs: Name (Varchar,32 ), Address (Varchar, 128), Date of Birth (Date format: YYYY-MM-DD), Date of Registration (Date format: YYY-MM-DD)
 
+### Case 1
+
+**Input:** Name null, all others within acceptable limits, then click 'register' button.
+**Expected output:** Stays on page, with all inputs still present and displays error message of: "Error: Name not valid"
+**Actual Output:**
+
+
+
+### Case 2
+
+**Input:** Name longer than 32 characters, all others within acceptable limits then click 'register' button.
+**Expected output:** Stays on page, with all inputs still present and displays error message of: "Error: Name not valid"
+**Actual Output:**
 
 ---
 
