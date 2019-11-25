@@ -16,18 +16,21 @@ public class RegisterBean {
     
     public String createAccount(String ID, String password1, String password2) throws SQLException {
         if (password1.equals(password2)) {
-            DBBean db = new DBBean();
+            DBInsertBean dbib = new DBInsertBean();
             
             // the mysql insert statement
             String query = " insert into users (ID, PASSWORD, STATUS)" + " values (?, ?, ?)";
             // create the mysql insert preparedstatement
             
+            Connection con = dbib.openConnection();
             
-            /*PreparedStatement preparedStmt = db.prepareStatement(query);
+            PreparedStatement preparedStmt = con.prepareStatement(query);
             preparedStmt.setString (1, ID);
             preparedStmt.setString (2, password1);
-            preparedStmt.setString (3, "PENDING");*/
+            preparedStmt.setString (3, "PENDING");
+            preparedStmt.executeUpdate();
             
+            dbib.closeConnection(con);
             
             return("A");
         }

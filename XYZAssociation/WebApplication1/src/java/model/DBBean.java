@@ -27,10 +27,12 @@ public class DBBean {
     public ArrayList<String> doQuery(String query) {
         //StringBuilder sb = new StringBuilder();
         ArrayList<String> result = new ArrayList<String>();
+        DBInsertBean dbib = new DBInsertBean();
+        
         try {
             // You will need to explicitly load this driver in a web app
             Class.forName("org.apache.derby.jdbc.ClientDriver");
-            con = DriverManager.getConnection("jdbc:derby://localhost:1527/student", "pass", "pass");
+            con = dbib.openConnection();
             state = con.createStatement();
             rs = state.executeQuery(query);
             ResultSetMetaData rsmd = rs.getMetaData();
