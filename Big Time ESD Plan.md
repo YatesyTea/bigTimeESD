@@ -3,7 +3,8 @@
 ## Table of Contents
 
 1. [Actors](#actors)
-2. [Feature List](#feature-list)
+2. [User Stories](#user-stories)
+3. [Feature List](#feature-list)
    1. [Feature 1: Main Home Page](#feature-1-main-home-page)
    2. [Feature 2: Login Page](#feature-2-login-page)
    3. [Feature 3: Registration](#feature-3-registration-page)
@@ -12,7 +13,6 @@
    6. [Feature 6: Admin User Dashboard](#feature-6-admin-user-dashboard)
    7. [Feature 7: Session Creation](#feature-7-session-creation)
    8. [Feature 8: Claim Eligibility](# feature-8-claim-eligibility)
-3. [User Stories](#user-stories)
 4. [Test Plan](#test-plan)
    1. [Types of Testing](#types-of-testing)
    2. [Feature 1 Tests](#feature-1-tests)
@@ -27,7 +27,19 @@
 * Normal User
 
 ----
+# User Stories
 
+### User
+
+* As the user I want to send personal details for approval, so that I can have a membership account.
+* As the user I want to login, so to be able apply for claims.
+* As the user I want to be able to access payment options, so that I'm able
+
+### Admin
+* As the admin I want to be able to view member applications, in order to approve for membership.
+* As the admin I want to be able to view payments, in order to upgrade, or suspend membership.
+
+----
 # Feature List
 
 ## Feature 1: Main home page
@@ -184,13 +196,6 @@ Controller
 
 ---
 
-# User Stories
-
-### User
-
-* As the user I want to send personal details for approval, so that I can have a membership account.
-* As the user I want to login, so to be able apply for claims.
-* As the user I want to be able to access payment options, so that I'm able 
 
 ### Admin
 
@@ -473,6 +478,8 @@ INSERT INTO members (id, name, address, dob, dor, status, balance) VALUES
 <a id=gogsheets href="https://docs.google.com/spreadsheets/d/1DXTQvEFn6kV4eG-qfvtgqFSeE2ST_28rcJP0cOD5Hj4/edit?usp=sharing">Sprint Docs</a>
 
 <a id=logs href="https://docs.google.com/document/d/1tv6pBWNG2S4F1PeunVcP6EQp7c0JF7EVHmuRfZmk6g4/edit">Non Git Logs</a>
+
+<p>View --> Controller --> Model --> Database</p>
 
 
 
