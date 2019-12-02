@@ -8,7 +8,9 @@ package controller;
 import java.io.IOException;
 import javax.servlet.*;
 import javax.servlet.http.*;
-import model.AuthenticatorBean;
+import model.DBAuthenticatorBean;
+import model.DBMemberBean;
+import model.Member;
 import model.User;
 
 /**
@@ -57,52 +59,41 @@ public class AuthenticateUser extends HttpServlet {
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-        
-        /*
-         * Takes inputs from index.html
-         * Initialises new DBBean
-         * Takes parameters
-         * Passes dbbean query with parameters
-         */
         response.setContentType("text/html");
-        AuthenticatorBean auth = new AuthenticatorBean();
+        DBAuthenticatorBean auth = new DBAuthenticatorBean();
+        DBMemberBean dbmb = new DBMemberBean();
+
         String name = request.getParameter("name");
         String pass = request.getParameter("pass");
         String s = auth.login(name, pass);
-        
-        /*
-         * Added section for Sprint 2
-        
-        Cookie cookie = new Cookie("name", name);
-        cookie.setMaxAge(30*60);
-        
-        response.addCookie(cookie);
-        */
+
         User user = new User(name, pass, s);
+        Member member = new Member();
+
+        member = dbmb.doQuery("SELECT * FROM MEMBERS WHERE ID = '" + name + "'").get(0);
+        double balance = member.getBalance();
+        
         HttpSession session = request.getSession();
         session.setAttribute("status", user);
-        
-        System.out.println(user.getStatus() + s);
-        
+        session.setAttribute("member", member);
+
+        System.out.println(member.display());
+
         request.setAttribute("verify", s);
+
+        request.setAttribute("balance", balance);
         RequestDispatcher view;
-        
-        if(user.getStatus().equals("ADMIN")){
+
+        if (user.getStatus().equals("ADMIN")) {
             view = request.getRequestDispatcher("adminView.jsp");
-        }
-        
-        else if(user.getStatus().equals("APPROVED")){
+        } else if (user.getStatus().equals("APPROVED")) {
             view = request.getRequestDispatcher("loginView.jsp");
-        }
-        
-        else if(user.getStatus().equals("PENDING")){
+        } else if (user.getStatus().equals("PENDING")) {
             view = request.getRequestDispatcher("userView.jsp");
+        } else {
+            view = request.getRequestDispatcher("noLoginView.jsp");
         }
-        
-        else {
-            view = request.getRequestDispatcher("noLoginView.jsp"); 
-        }
-        
+
         view.forward(request, response);
     }
 

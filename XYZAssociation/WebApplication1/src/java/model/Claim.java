@@ -15,9 +15,9 @@ public class Claim {
     private String date;
     private String rationale;
     private String status;
-    private int amount;
+    private double amount;
 
-    public Claim(int id, String mem_id, String date, String rationale, String status, int amount) {
+    public Claim(int id, String mem_id, String date, String rationale, String status, double amount) {
         this.id = id;
         this.mem_id = mem_id;
         this.date = date;
@@ -66,16 +66,16 @@ public class Claim {
         this.status = status;
     }
 
-    public int getAmount() {
+    public double getAmount() {
         return amount;
     }
 
-    public void setAmount(int amount) {
+    public void setAmount(double amount) {
         this.amount = amount;
     }
     
     public String display() {
-        return "id; " + this.id + "rationale; " + this.rationale;
+        return "id: " + this.id + "rationale: " + this.rationale;
     }
     
 
