@@ -11,14 +11,13 @@ package model;
  */
 public class User {
     private String name = "";
-    private String status = "";
     private String password = "";
+    private String status = "";
     
-    public User(String name, String status, String password) {
+    public User(String name, String password, String status) {
         this.name = name;
-        this.status = status;
         this.password = password;
-        
+        this.status = status;
     }
 
     public String getName() {

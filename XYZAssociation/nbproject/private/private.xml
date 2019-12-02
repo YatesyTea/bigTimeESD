@@ -3,15 +3,21 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-            <file>file:/D:/Github%20Archive/bigTimeESD/XYZAssociation/WebApplication1/web/registrationView.jsp</file>
             <file>file:/D:/Github%20Archive/bigTimeESD/XYZAssociation/WebApplication1/web/WEB-INF/web.xml</file>
+            <file>file:/D:/Github%20Archive/bigTimeESD/XYZAssociation/WebApplication1/web/registrationView.jsp</file>
+            <file>file:/D:/Github%20Archive/bigTimeESD/XYZAssociation/WebApplication1/src/java/controller/MakePaymentController.java</file>
+            <file>file:/D:/Github%20Archive/bigTimeESD/XYZAssociation/WebApplication1/web/makeClaim.jsp</file>
+            <file>file:/D:/Github%20Archive/bigTimeESD/XYZAssociation/WebApplication1/src/java/model/User.java</file>
+            <file>file:/D:/Github%20Archive/bigTimeESD/XYZAssociation/WebApplication1/src/java/model/AuthenticatorBean.java</file>
+            <file>file:/D:/Github%20Archive/bigTimeESD/XYZAssociation/WebApplication1/src/java/controller/ShowMemberInfo.java</file>
+            <file>file:/D:/Github%20Archive/bigTimeESD/XYZAssociation/WebApplication1/src/java/model/RegisterBean.java</file>
+            <file>file:/D:/Github%20Archive/bigTimeESD/XYZAssociation/WebApplication1/web/makePayment.jsp</file>
+            <file>file:/D:/Github%20Archive/bigTimeESD/XYZAssociation/WebApplication1/src/java/model/GetMemberClaimsBean.java</file>
             <file>file:/D:/Github%20Archive/bigTimeESD/XYZAssociation/WebApplication1/web/loginView.jsp</file>
             <file>file:/D:/Github%20Archive/bigTimeESD/XYZAssociation/WebApplication1/src/java/controller/CheckCookie.java</file>
-            <file>file:/D:/Github%20Archive/bigTimeESD/XYZAssociation/WebApplication1/src/java/model/AuthenticatorBean.java</file>
-            <file>file:/D:/Github%20Archive/bigTimeESD/XYZAssociation/WebApplication1/src/java/model/DBBean.java</file>
+            <file>file:/D:/Github%20Archive/bigTimeESD/XYZAssociation/WebApplication1/web/memberInfo.jsp</file>
             <file>file:/D:/Github%20Archive/bigTimeESD/XYZAssociation/WebApplication1/src/java/controller/RegistrationController.java</file>
             <file>file:/D:/Github%20Archive/bigTimeESD/XYZAssociation/WebApplication1/web/index.html</file>
-            <file>file:/D:/Github%20Archive/bigTimeESD/XYZAssociation/WebApplication1/src/java/model/RegisterBean.java</file>
             <file>file:/D:/Github%20Archive/bigTimeESD/XYZAssociation/WebApplication1/src/java/controller/AuthenticateUser.java</file>
         </group>
     </open-files>

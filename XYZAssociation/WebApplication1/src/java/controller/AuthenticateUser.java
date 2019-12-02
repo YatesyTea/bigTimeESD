@@ -78,12 +78,31 @@ public class AuthenticateUser extends HttpServlet {
         
         response.addCookie(cookie);
         */
-        User user = new User(name, s, pass);
+        User user = new User(name, pass, s);
         HttpSession session = request.getSession();
         session.setAttribute("status", user);
         
+        System.out.println(user.getStatus() + s);
+        
         request.setAttribute("verify", s);
-        RequestDispatcher view = request.getRequestDispatcher("loginView.jsp");
+        RequestDispatcher view;
+        
+        if(user.getStatus().equals("ADMIN")){
+            view = request.getRequestDispatcher("adminView.jsp");
+        }
+        
+        else if(user.getStatus().equals("APPROVED")){
+            view = request.getRequestDispatcher("loginView.jsp");
+        }
+        
+        else if(user.getStatus().equals("PENDING")){
+            view = request.getRequestDispatcher("userView.jsp");
+        }
+        
+        else {
+            view = request.getRequestDispatcher("noLoginView.jsp"); 
+        }
+        
         view.forward(request, response);
     }
 

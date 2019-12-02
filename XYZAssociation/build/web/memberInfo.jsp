@@ -24,8 +24,10 @@
             
         <%
                 //ArrayList<Claim> claim = (ArrayList<Claim>) request.getAttribute("claimsList");
-                String s = (String) request.getAttribute("claimsList");
-                out.print(s);
+                Claim[] s = (Claim[]) request.getAttribute("claimsList");
+                for(int i=0; i < s.length; i++) {
+                    out.println(s[i]);
+                }
             %>
             
     </body>

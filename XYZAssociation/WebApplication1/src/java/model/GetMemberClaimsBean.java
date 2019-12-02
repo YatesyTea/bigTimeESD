@@ -11,7 +11,7 @@ import java.util.ArrayList;
  *
  * @author joshp
  */
-public class MemberInfoBean {
+public class GetMemberClaimsBean {
     
     public ArrayList<Claim> getClaims(String name) {
         //StringBuilder sb = new StringBuilder();
@@ -26,20 +26,4 @@ public class MemberInfoBean {
         
         return result;
     }
-    /*
-    public String getPayment(String name) {
-        //StringBuilder sb = new StringBuilder();
-        ArrayList<String> result = new ArrayList<String>();
-
-        DBUserBean db = new DBUserBean();
-        //sb.append(db.doQuery("SELECT * FROM USERS WHERE ID = '" + name+ "' AND PASSWORD = '"+pass+"'"));
-        result = db.doQuery("SELECT * FROM PAYMENT WHERE MEM_ID = '" + name + "'");
-        //if (!sb.toString().equalsIgnoreCase("")) {
-        //    return sb.toString();
-        //}
-        if (!result.isEmpty()) {
-            return result.get(2);
-        }
-        return "Failed";
-    }*/
 }

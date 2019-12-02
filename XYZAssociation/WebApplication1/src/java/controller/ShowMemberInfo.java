@@ -16,7 +16,7 @@ import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 import model.Claim;
 import model.DBUserBean;
-import model.MemberInfoBean;
+import model.GetMemberClaimsBean;
 import model.User;
 
 /**
@@ -53,18 +53,19 @@ public class ShowMemberInfo extends HttpServlet {
     protected void doGet(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
         
-        MemberInfoBean mib = new MemberInfoBean();
+        GetMemberClaimsBean mib = new GetMemberClaimsBean();
         ArrayList<Claim> claimList = new ArrayList<Claim>();
         HttpSession session = request.getSession();
         User user = (User)session.getAttribute("status");
         claimList = mib.getClaims(user.getName());
         
-        String s = "";
+        Claim[] claims = new Claim[claimList.size()];
         
-        for(int i=0; i < claimList.size(); i++) {
-            s = s + claimList.get(i).display() + "\n";
+        for(int i=0; i < claimList.size(); i++) {          
+            claims[i] = claimList.get(i);
         }
-        request.setAttribute("claimsList", s);
+        
+        request.setAttribute("claimsList", claims);
         
         RequestDispatcher view = request.getRequestDispatcher("memberInfo.jsp");
         view.forward(request, response);
