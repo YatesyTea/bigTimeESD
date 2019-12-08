@@ -79,7 +79,7 @@ What is it meant to take and reject?
 
 **Output after fix:** Displays admin page correctly, this was due to a section of the model not linking with jsp correctly
 
-![image-20191208171704285](Test Plan.assets/case4output.png)
+![image-20191208171704285](testplan.assets/case4output.png)
 
 ## Feature 3 Black Box Test
 
