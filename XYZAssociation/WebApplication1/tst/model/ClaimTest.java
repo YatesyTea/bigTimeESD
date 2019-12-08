@@ -30,7 +30,7 @@ public class ClaimTest {
     @Before
     public void setUp() {
         System.out.println("=== Set Up");
-        claim = new Claim(12,"me_aydin","2016-04-16","change wheels","PENDING",200.00);
+        claim = new Claim(12, "me_aydin", "2016-04-16", "change wheels", "PENDING", 200.00);
     }
     
     @After
@@ -80,10 +80,9 @@ public class ClaimTest {
      */
     @Test
     public void testGetMem_id() {
-        // Print test name, then initialise instance.
         System.out.println("getMem_id");
         Claim instance = claim;
-        // Set result and expected.
+
         String expResult = "me_aydin";
         String result = instance.getMem_id();
 
@@ -96,11 +95,14 @@ public class ClaimTest {
     @Test
     public void testSetMem_id() {
         System.out.println("setMem_id");
-        String mem_id = "foo";
-        String expResult = "foo";
         Claim instance = claim;
+        
+        String mem_id = "foo";
         instance.setMem_id(mem_id);
+        
+        String expResult = "foo";
         String result = instance.getMem_id();
+        
         assertEquals(expResult, result);
     }
 
@@ -111,29 +113,47 @@ public class ClaimTest {
     public void testGetDate() {
         System.out.println("getDate");
         Claim instance = claim;
+        
         String expResult = "2016-04-16";
         String result = instance.getDate();
+        
         assertEquals(expResult, result);
     }
+    
 
     /**
      * Test of setDate method, of class Claim.
      */
     @Test
     public void testSetDate() {
-        // Print test running, then set instance.
         System.out.println("setDate");
         Claim instance = claim;
         
-        // Set the date.
         String date = "2018-09-23";
         instance.setDate(date);
         
-        // Set the expResult and result.
         String expResult = date;
         String result = instance.getDate();
         
-        // Compare them.
+        assertEquals(expResult, result);
+    }
+    
+    /**
+     * Test of setDate method, of class Claim.
+     * Adds in an invalid date, shouldn't go through
+     *  Should show the date when initialised not new one.
+     */
+    @Test
+    public void testSetBadDate() {
+        System.out.println("setDate");
+        Claim instance = claim;
+        
+        String date = "GRILLED CHEESE";
+        instance.setDate(date);
+        
+        String expResult = date;
+        String result = instance.getDate();
+        
         assertEquals(expResult, result);
     }
 
