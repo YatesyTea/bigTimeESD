@@ -16,7 +16,7 @@ import java.util.ArrayList;
  *
  * @author joshp
  */
-public class DBMakeClaimBean {
+public class DBClaimINSERT {
 
     public String makeClaim(String memID, String rationale, double amount) throws SQLException, ParseException {
         DBConnectorBean dbib = new DBConnectorBean();

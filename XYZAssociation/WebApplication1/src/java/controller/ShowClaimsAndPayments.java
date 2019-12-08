@@ -15,8 +15,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 import model.Claim;
-import model.DBReturnClaimsBean;
-import model.DBGetUserBean;
+import model.DBClaimRETURN;
 import model.User;
 
 /**
@@ -53,12 +52,12 @@ public class ShowClaimsAndPayments extends HttpServlet {
     protected void doGet(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
 
-        DBReturnClaimsBean mib = new DBReturnClaimsBean();
+        DBClaimRETURN mib = new DBClaimRETURN();
         ArrayList<Claim> claimList = new ArrayList<Claim>();
         HttpSession session = request.getSession();
         User user = (User) session.getAttribute("status");
 
-        claimList = mib.getClaim("SELECT * FROM CLAIMS WHERE MEM_ID = '" + user.getName() + "'");
+        claimList = mib.getClaims("SELECT * FROM CLAIMS WHERE MEM_ID = '" + user.getName() + "'");
 
         request.setAttribute("claimsList", claimList);
 

@@ -18,7 +18,7 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
-import model.DBMakeClaimBean;
+import model.DBClaimINSERT;
 import model.Member;
 import model.User;
 
@@ -77,7 +77,7 @@ public class SubmitClaimController extends HttpServlet {
         
         request.setAttribute("balance", member.getBalance());
         
-        DBMakeClaimBean dbmcb = new DBMakeClaimBean();
+        DBClaimINSERT dbmcb = new DBClaimINSERT();
         
         try {
             dbmcb.makeClaim(user.getName(), rationale, Double.parseDouble(amount));

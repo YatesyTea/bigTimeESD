@@ -9,7 +9,7 @@ import java.io.IOException;
 import javax.servlet.*;
 import javax.servlet.http.*;
 import model.DBAuthenticatorBean;
-import model.DBMemberBean;
+import model.DBMemberRETURN;
 import model.Member;
 import model.User;
 
@@ -61,32 +61,29 @@ public class AuthenticateUser extends HttpServlet {
             throws ServletException, IOException {
         response.setContentType("text/html");
         DBAuthenticatorBean auth = new DBAuthenticatorBean();
-        DBMemberBean dbmb = new DBMemberBean();
+        DBMemberRETURN dbmb = new DBMemberRETURN();
 
         String name = request.getParameter("name");
         String pass = request.getParameter("pass");
-        String s = auth.login(name, pass);
+        String s = auth.login(name, pass).getStatus();
 
         User user = new User(name, pass, s);
-        Member member = new Member();
 
-        member = dbmb.doQuery("SELECT * FROM MEMBERS WHERE ID = '" + name + "'").get(0);
-        double balance = member.getBalance();
-        
         HttpSession session = request.getSession();
         session.setAttribute("status", user);
-        session.setAttribute("member", member);
-
-        System.out.println(member.display());
 
         request.setAttribute("verify", s);
 
-        request.setAttribute("balance", balance);
         RequestDispatcher view;
 
         if (user.getStatus().equals("ADMIN")) {
             view = request.getRequestDispatcher("adminView.jsp");
         } else if (user.getStatus().equals("APPROVED")) {
+            Member member = new Member();
+            member = dbmb.getMember(name).get(0);
+            double balance = member.getBalance();
+            session.setAttribute("member", member);
+            request.setAttribute("balance", balance);
             view = request.getRequestDispatcher("loginView.jsp");
         } else if (user.getStatus().equals("PENDING")) {
             view = request.getRequestDispatcher("userView.jsp");
