@@ -31,7 +31,7 @@ public class DBClaimINSERT {
         preparedStmt.setString(1, memID);
         preparedStmt.setDate(2, java.sql.Date.valueOf(todayLocalDate));
         preparedStmt.setString(3, rationale);
-        preparedStmt.setString(4, "PENDING");
+        preparedStmt.setString(4, "APPLIED");
         preparedStmt.setDouble(5, amount);
         preparedStmt.executeUpdate();
 

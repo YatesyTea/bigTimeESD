@@ -7,11 +7,14 @@ package controller;
 
 import java.io.IOException;
 import java.io.PrintWriter;
+import java.util.ArrayList;
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import model.DBAllMemberRETURN;
+import model.Member;
 
 /**
  *
@@ -60,6 +63,12 @@ public class AdminMembersListController extends HttpServlet {
     protected void doPost(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
         processRequest(request, response);
+        
+        DBAllMemberRETURN  amr = new DBAllMemberRETURN();
+        
+        ArrayList<Member> members;
+        members = amr.getMember();
+        request.setAttribute("members", members);
         
         RequestDispatcher view = request.getRequestDispatcher("adminMembersList.jsp");
         view.forward(request, response);
