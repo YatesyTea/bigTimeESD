@@ -35,23 +35,23 @@
     <body style="background-color: teal">
         <h1 id="textid">Admin Page</h1>
         
-        <form method="post" action="MakePaymentController.do"><p style="text-align:center">
+        <form method="post" action="AdminMembersListController.do"><p style="text-align:center">
         <input id="textboxid" type="SUBMIT" value="Members List" style="align-self: center">
         </p></form>
         
-        <form method="post" action="MakePaymentController.do"><p style="text-align:center">
+        <form method="post" action="AdminOutstandingBalanceController.do"><p style="text-align:center">
         <input id="textboxid" type="SUBMIT" value="Outstanding Balances" style="align-self: center">
         </p></form>
         
-        <form method="post" action="MakePaymentController.do"><p style="text-align:center">
+        <form method="post" action="AdminClaimsListController.do"><p style="text-align:center">
         <input id="textboxid" type="SUBMIT" value="Claims List" style="align-self: center">
         </p></form>
         
-        <form method="post" action="MakePaymentController.do"><p style="text-align:center">
+        <form method="post" action="AdminProvisionalMembersController.do"><p style="text-align:center">
         <input id="textboxid" type="SUBMIT" value="Provisional Members" style="align-self: center">
         </p></form>
         
-        <form method="post" action="MakePaymentController.do"><p style="text-align:center">
+        <form method="post" action="AdminTurnoverReportsController.do"><p style="text-align:center">
         <input id="textboxid" type="SUBMIT" value="Turnover Reports" style="align-self: center">
         </p></form>
         

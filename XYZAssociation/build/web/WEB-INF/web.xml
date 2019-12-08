@@ -1,6 +1,46 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <web-app version="3.1" xmlns="http://xmlns.jcp.org/xml/ns/javaee" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd">
     <servlet>
+        <servlet-name>AdminClaimsListController</servlet-name>
+        <servlet-class>controller.AdminClaimsListController</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>AdminClaimsListController</servlet-name>
+        <url-pattern>/AdminClaimsListController.do</url-pattern>
+    </servlet-mapping>
+    <servlet>
+        <servlet-name>AdminMembersListController</servlet-name>
+        <servlet-class>controller.AdminMembersListController</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>AdminMembersListController</servlet-name>
+        <url-pattern>/AdminMembersListController.do</url-pattern>
+    </servlet-mapping>
+    <servlet>
+        <servlet-name>AdminOutstandingBalanceController</servlet-name>
+        <servlet-class>controller.AdminOutstandingBalanceController</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>AdminOutstandingBalanceController</servlet-name>
+        <url-pattern>/AdminOutstandingBalanceController.do</url-pattern>
+    </servlet-mapping>
+    <servlet>
+        <servlet-name>AdminProvisionalMembersController</servlet-name>
+        <servlet-class>controller.AdminProvisionalMembersController</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>AdminProvisionalMembersController</servlet-name>
+        <url-pattern>/AdminProvisionalMembersController.do</url-pattern>
+    </servlet-mapping>
+    <servlet>
+        <servlet-name>AdminTurnoverReportsController</servlet-name>
+        <servlet-class>controller.AdminTurnoverReportsController</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>AdminTurnoverReportsController</servlet-name>
+        <url-pattern>/AdminTurnoverReportsController.do</url-pattern>
+    </servlet-mapping>
+    <servlet>
         <servlet-name>AuthenticateUser</servlet-name>
         <servlet-class>controller.AuthenticateUser</servlet-class>
     </servlet>
@@ -48,7 +88,6 @@
         <servlet-name>MakePaymentController</servlet-name>
         <servlet-class>controller.MakePaymentController</servlet-class>
     </servlet>
-    
     <servlet-mapping>
         <servlet-name>SubmitClaimController</servlet-name>
         <url-pattern>/SubmitClaimController.do</url-pattern>
@@ -57,7 +96,6 @@
         <servlet-name>SubmitClaimController</servlet-name>
         <servlet-class>controller.SubmitClaimController</servlet-class>
     </servlet>
-    
     <session-config>
         <session-timeout>
             20
