@@ -1,4 +1,4 @@
-# Test Plan
+Test Plan
 
 ## Types of testing
 
@@ -42,6 +42,70 @@ What is it meant to take and reject?
 #### For View
 
 #### For Controller
+
+### Table for Test Plan
+
+| Feature Name | Input                                               | Expected Output              | Actual Output | Notes |
+| ------------ | --------------------------------------------------- | ---------------------------- | ------------- | ----- |
+| Login Page   | admin username<br />admin password<br />click login | Displays the admin dashboard |               |       |
+| Login Page   | standard username<br />standard pw<br />click login | Displays the user dashboard  |               |       |
+|              |                                                     |                              |               |       |
+|              |                                                     |                              |               |       |
+|              |                                                     |                              |               |       |
+|              |                                                     |                              |               |       |
+|              |                                                     |                              |               |       |
+|              |                                                     |                              |               |       |
+|              |                                                     |                              |               |       |
+|              |                                                     |                              |               |       |
+|              |                                                     |                              |               |       |
+|              |                                                     |                              |               |       |
+|              |                                                     |                              |               |       |
+|              |                                                     |                              |               |       |
+|              |                                                     |                              |               |       |
+|              |                                                     |                              |               |       |
+|              |                                                     |                              |               |       |
+|              |                                                     |                              |               |       |
+|              |                                                     |                              |               |       |
+|              |                                                     |                              |               |       |
+|              |                                                     |                              |               |       |
+|              |                                                     |                              |               |       |
+|              |                                                     |                              |               |       |
+|              |                                                     |                              |               |       |
+|              |                                                     |                              |               |       |
+|              |                                                     |                              |               |       |
+|              |                                                     |                              |               |       |
+|              |                                                     |                              |               |       |
+|              |                                                     |                              |               |       |
+|              |                                                     |                              |               |       |
+|              |                                                     |                              |               |       |
+|              |                                                     |                              |               |       |
+|              |                                                     |                              |               |       |
+|              |                                                     |                              |               |       |
+|              |                                                     |                              |               |       |
+|              |                                                     |                              |               |       |
+|              |                                                     |                              |               |       |
+|              |                                                     |                              |               |       |
+|              |                                                     |                              |               |       |
+|              |                                                     |                              |               |       |
+|              |                                                     |                              |               |       |
+|              |                                                     |                              |               |       |
+|              |                                                     |                              |               |       |
+|              |                                                     |                              |               |       |
+|              |                                                     |                              |               |       |
+|              |                                                     |                              |               |       |
+|              |                                                     |                              |               |       |
+|              |                                                     |                              |               |       |
+|              |                                                     |                              |               |       |
+|              |                                                     |                              |               |       |
+|              |                                                     |                              |               |       |
+|              |                                                     |                              |               |       |
+|              |                                                     |                              |               |       |
+|              |                                                     |                              |               |       |
+|              |                                                     |                              |               |       |
+|              |                                                     |                              |               |       |
+|              |                                                     |                              |               |       |
+|              |                                                     |                              |               |       |
+|              |                                                     |                              |               |       |
 
 
 
