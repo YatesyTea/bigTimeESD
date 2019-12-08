@@ -20,7 +20,7 @@
         <%
             User user = (User) session.getAttribute("status");
             out.println("You are logged in as: " + user.getName());
-            //ArrayList<Claim> claim = (ArrayList<Claim>) request.getAttribute("claimsList");
+            
             ArrayList<Claim> claimList = (ArrayList<Claim>)request.getAttribute("claimsList");
             for (int i = 0; i < claimList.size(); i++) {
                 out.println(claimList.get(i).display());

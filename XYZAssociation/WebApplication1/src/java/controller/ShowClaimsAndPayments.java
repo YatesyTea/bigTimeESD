@@ -57,11 +57,11 @@ public class ShowClaimsAndPayments extends HttpServlet {
         HttpSession session = request.getSession();
         User user = (User) session.getAttribute("status");
 
-        claimList = mib.getClaims("SELECT * FROM CLAIMS WHERE MEM_ID = '" + user.getName() + "'");
+        claimList = mib.getClaims(user.getName());
 
         request.setAttribute("claimsList", claimList);
 
-        RequestDispatcher view = request.getRequestDispatcher("memberInfo.jsp");
+        RequestDispatcher view = request.getRequestDispatcher("claimsAndPayments.jsp");
         view.forward(request, response);
     }
 

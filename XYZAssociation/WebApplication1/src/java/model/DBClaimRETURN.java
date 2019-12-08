@@ -35,7 +35,7 @@ public class DBClaimRETURN {
             rs = state.executeQuery("SELECT * FROM CLAIMS WHERE MEM_ID = '" + name + "'");
             
             if (rs.next()) {
-                result.add(new Claim(Integer.parseInt(rs.getString(1)), rs.getString(2), rs.getString(3), rs.getString(4), rs.getString(5), Integer.parseInt(rs.getString(6))));
+                result.add(new Claim(Integer.parseInt(rs.getString(1)), rs.getString(2), rs.getString(3), rs.getString(4), rs.getString(5), Double.parseDouble(rs.getString(6))));
           
             }
             rs.close();
