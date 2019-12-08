@@ -15,8 +15,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 import model.Claim;
-import model.DBUserBean;
-import model.GetMemberClaimsBean;
+import model.DBClaimRETURN;
 import model.User;
 
 /**
@@ -53,7 +52,7 @@ public class ShowMemberInfo extends HttpServlet {
     protected void doGet(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
         
-        GetMemberClaimsBean mib = new GetMemberClaimsBean();
+        DBClaimRETURN mib = new DBClaimRETURN();
         ArrayList<Claim> claimList = new ArrayList<Claim>();
         HttpSession session = request.getSession();
         User user = (User)session.getAttribute("status");

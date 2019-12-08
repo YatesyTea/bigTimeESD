@@ -27,21 +27,14 @@ public class DBRegisterBean {
             java.util.Date utilDate = new SimpleDateFormat("yyyy-MM-dd").parse(dob);
             Date sqlDate = new Date(utilDate.getTime());
 
-            // the mysql insert statement
-            String query = " insert into users (ID, PASSWORD, STATUS)" + " values (?, ?, ?)";
-            // create the mysql insert preparedstatement
-
             Connection con = dbib.openConnection();
 
-            PreparedStatement preparedStmt = con.prepareStatement(query);
+            PreparedStatement preparedStmt = con.prepareStatement("insert into users (ID, PASSWORD, STATUS)" + " values (?, ?, ?)");
             preparedStmt.setString(1, ID);
             preparedStmt.setString(2, password1);
             preparedStmt.setString(3, "PENDING");
             preparedStmt.executeUpdate();
-
-            query = " insert into members (ID, NAME, ADDRESS, DOB, DOR, STATUS, BALANCE)" + " values (?, ?, ?, ?, ?, ?, ?)";
-
-            preparedStmt = con.prepareStatement(query);
+            preparedStmt = con.prepareStatement("insert into members (ID, NAME, ADDRESS, DOB, DOR, STATUS, BALANCE)" + " values (?, ?, ?, ?, ?, ?, ?)");
             preparedStmt.setString(1, ID);
             preparedStmt.setString(2, name);
             preparedStmt.setString(3, address);

@@ -18,29 +18,25 @@ import java.sql.ResultSetMetaData;
 import java.sql.SQLException;
 import java.sql.Statement;
 
-public class DBClaimsBean {
+public class DBMemberRETURN {
 
     private Connection con;
     private Statement state;
     private ResultSet rs;
 
-    public ArrayList<Claim> doQuery(String query) {
-        //StringBuilder sb = new StringBuilder();
-        ArrayList<Claim> result = new ArrayList<Claim>();
-        DBInsertBean dbib = new DBInsertBean();
+    public ArrayList<Member> getMember(String name) {
+        ArrayList<Member> result = new ArrayList<Member>();
+        DBConnectorBean dbib = new DBConnectorBean();
         
         try {
-            // You will need to explicitly load this driver in a web app
             Class.forName("org.apache.derby.jdbc.ClientDriver");
             con = dbib.openConnection();
             state = con.createStatement();
-            rs = state.executeQuery(query);
+            rs = state.executeQuery("SELECT * FROM MEMBERS WHERE ID = '" + name + "'");
             
             if (rs.next()) {
                 
-                result.add(new Claim(Integer.parseInt(rs.getString(1)), rs.getString(2), rs.getString(3), rs.getString(4), rs.getString(5), Integer.parseInt(rs.getString(6))));
-                //sb.append(rs.getString(i));
-                //sb.append("\n<br>");
+                result.add(new Member(rs.getString(1), rs.getString(2), rs.getString(3), rs.getString(4), rs.getString(5), rs.getString(6), Double.parseDouble(rs.getString(7))));
                 
             }
             rs.close();
@@ -49,12 +45,7 @@ public class DBClaimsBean {
         } catch (ClassNotFoundException | SQLException e) {
             System.err.println("Error: " + e);
 
-        }//try
-        //if (!sb.toString().equalsIgnoreCase("")) {
-        //    return sb.toString();
-        //}
-        //return "DBUserBean Failed";
-        
+        }
         return result;
     }
-} //class
+}

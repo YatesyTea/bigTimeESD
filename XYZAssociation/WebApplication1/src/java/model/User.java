@@ -20,6 +20,10 @@ public class User {
         this.status = status;
     }
 
+    User() {
+        this.status = "FAILED";
+    }
+
     public String getName() {
         return name;
     }

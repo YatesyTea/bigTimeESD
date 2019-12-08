@@ -16,7 +16,7 @@ public class RegisterBean {
     
     public String createAccount(String ID, String password1, String password2) throws SQLException {
         if (password1.equals(password2)) {
-            DBInsertBean dbib = new DBInsertBean();
+            DBConnectorBean dbib = new DBConnectorBean();
             
             // the mysql insert statement
             String query = " insert into users (ID, PASSWORD, STATUS)" + " values (?, ?, ?)";
