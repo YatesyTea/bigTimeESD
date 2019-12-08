@@ -49,7 +49,7 @@ What is it meant to take and reject?
 | ------------ | --------------------------------------------------- | ---------------------------- | ------------- | ----- |
 | Login Page   | admin username<br />admin password<br />click login | Displays the admin dashboard |               |       |
 | Login Page   | standard username<br />standard pw<br />click login | Displays the user dashboard  |               |       |
-|              |                                                     |                              |               |       |
+| Session time out           |                                                     |                              |               |       |
 |              |                                                     |                              |               |       |
 |              |                                                     |                              |               |       |
 |              |                                                     |                              |               |       |
