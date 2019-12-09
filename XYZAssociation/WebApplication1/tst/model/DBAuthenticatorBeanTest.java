@@ -17,6 +17,7 @@ import static org.junit.Assert.*;
  * @author Yates
  */
 public class DBAuthenticatorBeanTest {
+    private DBAuthenticatorBean dbab;
     
     public DBAuthenticatorBeanTest() {
     }
@@ -31,26 +32,80 @@ public class DBAuthenticatorBeanTest {
     
     @Before
     public void setUp() {
+        dbab = new DBAuthenticatorBean();
     }
     
     @After
     public void tearDown() {
+        dbab = null;
     }
 
     /**
      * Test of login method, of class DBAuthenticatorBean.
      */
     @Test
-    public void testLogin() {
-        System.out.println("login");
-        String name = "";
-        String pass = "";
-        DBAuthenticatorBean instance = new DBAuthenticatorBean();
-        User expResult = null;
-        User result = instance.login(name, pass);
+    public void testAdminLogin() {
+        System.out.println("admin login");
+        DBAuthenticatorBean instance = dbab;
+        
+        String name = "admin";
+        String pass = "admin";
+        
+        String expResult = "ADMIN" ;
+        String result = instance.login(name, pass).getStatus();
+        
         assertEquals(expResult, result);
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+    }
+    
+      /**
+     * Test of login method, of class DBAuthenticatorBean.
+     */
+    @Test
+    public void testUserLogin() {
+        System.out.println("user login");
+        DBAuthenticatorBean instance = dbab;
+        
+        String name = "e-simons";
+        String pass = "221165";
+        
+        String expResult = "APPROVED" ;
+        String result = instance.login(name, pass).getStatus();
+        
+        assertEquals(expResult, result);
+    }
+    
+    /**
+     * Test of login method, of class DBAuthenticatorBean.
+     */
+    @Test
+    public void testFakeUserLogin(){
+        System.out.println("Fake login");
+        DBAuthenticatorBean instance = dbab;
+        
+        String name = "xDDD";
+        String pass = "I'm not real";
+        
+        String expResult = "FAILED";
+        String result = instance.login(name,pass).getStatus();
+        
+        assertEquals(expResult,result);
+    }
+    
+    /**
+     * Test of login method, of class DBAuthenticatorBean.
+     */
+    @Test
+    public void testAdminLoginBadPassword() {
+        System.out.println("wrong password Login");
+        DBAuthenticatorBean instance = dbab;
+        
+        String name = "admin";
+        String pass = "monkaW"; 
+        
+        String expResult = "FAILED";
+        String result = instance.login(name, pass).getStatus();
+        
+        assertEquals(expResult, result);
     }
     
 }

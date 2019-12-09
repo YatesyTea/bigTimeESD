@@ -17,6 +17,7 @@ import static org.junit.Assert.*;
  * @author Yates
  */
 public class DBClaimINSERTTest {
+    DBClaimINSERT dbcIn;
     
     public DBClaimINSERTTest() {
     }
@@ -31,6 +32,7 @@ public class DBClaimINSERTTest {
     
     @Before
     public void setUp() {
+        dbcIn = new DBClaimINSERT();
     }
     
     @After
@@ -43,13 +45,13 @@ public class DBClaimINSERTTest {
     @Test
     public void testMakeClaim() throws Exception {
         System.out.println("makeClaim");
-        DBClaimINSERT instance = new DBClaimINSERT();
+        DBClaimINSERT instance = dbcIn;
         
-        String memID = "";
-        String rationale = "";
-        double amount = 0.0;
+        String memID = "e-simons";
+        String rationale = "broken life";
+        double amount = 200.0;
         
-        String expResult = "";
+        String expResult = "A";
         String result = instance.makeClaim(memID, rationale, amount);
         
         assertEquals(expResult, result);
