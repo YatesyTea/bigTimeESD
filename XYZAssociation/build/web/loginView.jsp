@@ -34,7 +34,6 @@
 
     </head>
     <body style="background-color: teal">
-        <h1>Login Result</h1>
         <p>
             <%
                 //String verified = (String) request.getAttribute("verify");
@@ -42,18 +41,18 @@
             %>
 
             <title id="textid">MEMBERS DASHBOARD</title>
-        <h1 id="textid">Outstanding Balance:</h1>
+        <h1 id="textid">Outstanding Balance: 
 
-        <%
-            Double balance = (Double) request.getAttribute("balance");
-            out.print(Double.toString(balance));
-        %>
-
-        <form method="post" action="SubmitPaymentController.do"><p style="text-align:center">
+            <%
+                Double balance = (Double) request.getAttribute("balance");
+                out.print("£" + Double.toString(balance));
+            %>
+        </h1>
+        <form method="post" action="ShowSubmitPayment.do"><p style="text-align:center">
                 <input id="textboxid" type="SUBMIT" value="Make Payment" style="align-self: center">
             </p></form>
 
-        <form method="post" action="SubmitClaimController.do"><p style="text-align:center">
+        <form method="post" action="ShowSubmitClaim.do"><p style="text-align:center">
                 <input id="textboxid" type="SUBMIT" value="Submit Claim" style="align-self: center">
             </p></form>
 

@@ -4,6 +4,14 @@
         <servlet-name>AdminClaimsListController</servlet-name>
         <servlet-class>controller.AdminClaimsListController</servlet-class>
     </servlet>
+    <servlet>
+        <servlet-name>ShowSubmitClaim</servlet-name>
+        <servlet-class>controller.ShowSubmitClaim</servlet-class>
+    </servlet>
+        <servlet>
+        <servlet-name>ShowSubmitPayment</servlet-name>
+        <servlet-class>controller.ShowSubmitPayment</servlet-class>
+    </servlet>
     <servlet-mapping>
         <servlet-name>AdminClaimsListController</servlet-name>
         <url-pattern>/AdminClaimsListController.do</url-pattern>
@@ -88,6 +96,14 @@
         <servlet-name>SubmitClaimController</servlet-name>
         <servlet-class>controller.SubmitClaimController</servlet-class>
     </servlet>
+    <servlet-mapping>
+        <servlet-name>ShowSubmitClaim</servlet-name>
+        <url-pattern>/ShowSubmitClaim.do</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>ShowSubmitPayment</servlet-name>
+        <url-pattern>/ShowSubmitPayment.do</url-pattern>
+    </servlet-mapping>
     <session-config>
         <session-timeout>
             20

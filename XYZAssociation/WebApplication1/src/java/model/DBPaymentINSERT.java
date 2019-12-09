@@ -18,21 +18,20 @@ import java.util.ArrayList;
  */
 public class DBPaymentINSERT {
 
-    public String makePayment(int ID, String memID, String typeOfPayment, int amount) throws SQLException, ParseException {
+    public String makePayment(String memID, String typeOfPayment, double amount) throws SQLException, ParseException {
         DBConnectorBean dbib = new DBConnectorBean();
 
         LocalDate todayLocalDate = LocalDate.now(ZoneId.of("Europe/London"));
 
-        String query = " insert into claims (mem_id, date, rationale, status, amount)" + " values (?, ?, ?, ?, ?)";
+        String query = "insert into payments (mem_id, type_of_payment, amount, date)" + " values (?, ?, ?, ?)";
         
         Connection con = dbib.openConnection();
 
         PreparedStatement preparedStmt = con.prepareStatement(query);
-        preparedStmt.setInt(1, ID);
-        preparedStmt.setString(2, memID);
-        preparedStmt.setString(3, typeOfPayment);
-        preparedStmt.setInt(4, amount);
-        preparedStmt.setDate(5, java.sql.Date.valueOf(todayLocalDate));
+        preparedStmt.setString(1, memID);
+        preparedStmt.setString(2, typeOfPayment);
+        preparedStmt.setDouble(3, amount);
+        preparedStmt.setDate(4, java.sql.Date.valueOf(todayLocalDate));
         preparedStmt.executeUpdate();
 
         dbib.closeConnection(con);

@@ -7,26 +7,17 @@ package controller;
 
 import java.io.IOException;
 import java.io.PrintWriter;
-import java.sql.SQLException;
-import java.text.ParseException;
-import java.util.logging.Level;
-import java.util.logging.Logger;
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
-import javax.servlet.http.HttpSession;
-import model.DBClaimINSERT;
-import model.DBPaymentINSERT;
-import model.Member;
-import model.User;
 
 /**
  *
- * @author joshp
+ * @author j3-lui
  */
-public class SubmitPaymentController extends HttpServlet {
+public class ShowSubmitClaim extends HttpServlet {
 
     /**
      * Processes requests for both HTTP <code>GET</code> and <code>POST</code>
@@ -68,30 +59,7 @@ public class SubmitPaymentController extends HttpServlet {
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-        HttpSession session = request.getSession();
-        User user = (User) session.getAttribute("status");
-        Member member = (Member) session.getAttribute("member");
-
-        String paymentType = request.getParameter("payment");
-        String amount = request.getParameter("cost");
-
-        request.setAttribute("balance", member.getBalance());
-
-        DBPaymentINSERT dbmcb = new DBPaymentINSERT();
-
-        try {
-            dbmcb.makePayment(user.getName(), paymentType, Double.parseDouble(amount));
-        } catch (SQLException ex) {
-            Logger.getLogger(SubmitClaimController.class.getName()).log(Level.SEVERE, null, ex);
-        } catch (ParseException ex) {
-            Logger.getLogger(SubmitClaimController.class.getName()).log(Level.SEVERE, null, ex);
-        }
-        RequestDispatcher view;
-        if (user.getStatus().equals("APPROVED")) {
-            view = request.getRequestDispatcher("loginView.jsp");
-        } else {
-            view = request.getRequestDispatcher("userView.jsp");
-        }
+        RequestDispatcher view = request.getRequestDispatcher("submitClaim.jsp");
         view.forward(request, response);
     }
 
