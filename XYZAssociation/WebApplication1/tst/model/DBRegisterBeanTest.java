@@ -41,42 +41,19 @@ public class DBRegisterBeanTest {
      * Test of createAccount method, of class DBRegisterBean.
      */
     @Test
-    public void testCreateAccountWithValid() throws Exception {
+    public void testCreateAccount() throws Exception {
         System.out.println("createAccount");
+        String name = "";
+        String password1 = "";
+        String password2 = "";
+        String address = "";
+        String dob = "";
         DBRegisterBean instance = new DBRegisterBean();
-        
-        String name = "Chicken McNugget";
-        String password1 = "Password123";
-        String password2 = "Password123";
-        String address = "Florida";
-        String dob = "2019-01-01";
- 
-        String expResult = "A";
+        String expResult = "";
         String result = instance.createAccount(name, password1, password2, address, dob);
-        
         assertEquals(expResult, result);
-        instance = null;
-    }
-    
-    /**
-     * Test of createAccount method, of class DBRegisterBean.
-     */
-    @Test
-    public void testCreateAccountWithInvalid() throws Exception {
-        System.out.println("createAccount");
-        DBRegisterBean instance2 = new DBRegisterBean();
-        
-        String name = "Santa Klaus 2";
-        String password1 = "Password123";
-        String password2 = "Passwo";
-        String address = "Florida";
-        String dob = "2019-01-01";
- 
-        String expResult = "F";
-        String result = instance2.createAccount(name, password1, password2, address, dob);
-        
-        assertEquals(expResult, result);
-        instance2 = null;
+        // TODO review the generated test code and remove the default call to fail.
+        fail("The test case is a prototype.");
     }
     
 }

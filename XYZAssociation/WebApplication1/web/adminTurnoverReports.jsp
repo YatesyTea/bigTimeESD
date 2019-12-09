@@ -9,7 +9,7 @@
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <title>JSP Page</title>
+        <title>Turnover Reports</title>
         
         <style>
             
@@ -32,10 +32,13 @@
         }
         
         </style>
-    
-    <h1 style="text-align:center; position:fixed; top:5px; right:5px;"><a id="textid" href="/XYZAssociation/index.html">Log Out</a></h1> 
+        
     </head>
     <body style="background-color: teal">
         <h1 id="textid">Admin Turnover Reports</h1>
+        
+        <h1 id="textid">Total Income:</h1>
+        <h1 id="textid">Total Expense:</h1>
+        
     </body>
 </html>

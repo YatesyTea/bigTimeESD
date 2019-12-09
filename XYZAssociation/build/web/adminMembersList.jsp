@@ -41,16 +41,15 @@
         }
 
         th, td {
-          text-align: left;
-          padding: 8px;
+          text-align: center;
+          padding: 4px;
           color: white;
         }
 
-        tr:nth-child(even){background-color: teal}
+        tr:nth-child{background-color: teal}
         
         </style>
-     
-    <h1 style="text-align:center; position:fixed; top:5px; right:5px;"><a id="textid" href="/XYZAssociation/index.html">Log Out</a></h1> 
+        
     </head>
     <body style="background-color: teal">
         <h1 id="textid">Admin Members List</h1>
@@ -81,6 +80,7 @@
                         out.println("<td>" + member.get(i).getDor() + "</td>");
                         out.println("<td>" + member.get(i).getStatus() + "</td>");
                         out.println("<td>" + member.get(i).getBalance() + "</td>");
+                        out.println("<td><button onclick=\"submitIndex(this)\">Suspend Member</button></td>");
                         out.println("</tr>");
                     }
                 %>

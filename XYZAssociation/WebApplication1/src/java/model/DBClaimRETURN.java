@@ -45,9 +45,6 @@ public class DBClaimRETURN {
             System.err.println("Error: " + e);
 
         }
-        if (!result.isEmpty()){
-            return result;
-        }
-        return null;    
+        return result;
     }
 }
