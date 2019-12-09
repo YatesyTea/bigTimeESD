@@ -31,6 +31,36 @@ Test Result:
 
 ![claimTestSetResult](whiteboxtests.assets/claimTestSetResult.PNG)
 
+## [DBAllClaimRETURN](file:///C:/Users/Yates/Documents/GitHub/bigTimeESD/XYZAssociation/dist/javadoc/model/DBAllClaimRETURN.html)
+
+| Modifier and Type     | Method and Description | Test Name         |
+| --------------------- | ---------------------- | ----------------- |
+| `java.util.ArrayList` | `getClaims()`          | `getValidClaim()` |
+
+Test Result:
+
+![dbACRResult](whiteboxtests.assets/dbACRResult.PNG)
+
+## [DBAllMemberRETURN](file:///C:/Users/Yates/Documents/GitHub/bigTimeESD/XYZAssociation/dist/javadoc/model/DBAllMemberRETURN.html)
+
+| Modifier and Type     | Method and Description | Test Name         |
+| --------------------- | ---------------------- | ----------------- |
+| `java.util.ArrayList` | `getMember()`          | `testGetMember()` |
+
+Test Result:
+
+![dbAMRTest](whiteboxtests.assets/dbAMRTest.PNG)
+
+## [DBAppliedMemberRETURN](file:///C:/Users/Yates/Documents/GitHub/bigTimeESD/XYZAssociation/dist/javadoc/model/DBAppliedMemberRETURN.html)
+
+| Modifier and Type     | Method and Description | Test Name                   |
+| --------------------- | ---------------------- | --------------------------- |
+| `java.util.ArrayList` | `getMember()`          | `testGetAllAppliedMember()` |
+
+Test Result:
+
+![dBAppMemRResult](whiteboxtests.assets/dBAppMemRResult.PNG)
+
 ## [DBAuthenticatorBean](file:///C:/Users/Yates/Documents/GitHub/bigTimeESD/XYZAssociation/dist/javadoc/model/DBAuthenticatorBean.html)
 
 | Modifier and Type | Method and Description                                | Test Name                     |
@@ -56,15 +86,34 @@ Test Result:
 
 ## [DBClaimRETURN](file:///C:/Users/Yates/Documents/GitHub/bigTimeESD/XYZAssociation/dist/javadoc/model/DBClaimRETURN.html)
 
+| Modifier and Type     | Method and Description | Test Name                |
+| --------------------- | ---------------------- | ------------------------ |
+| `java.util.ArrayList` | `getClaims()`          | `testValidGetClaims()`   |
+| `java.util.ArrayList` | `getClaims()`          | `testGetInvalidClaims()` |
 
+Test Result:
 
-## [DBConnectorBean](file:///C:/Users/Yates/Documents/GitHub/bigTimeESD/XYZAssociation/dist/javadoc/model/DBConnectorBean.html)
+![dbCRTestResult](whiteboxtests.assets/dbCRTestResult.PNG)
 
 
 
 ## [DBMemberRETURN](file:///C:/Users/Yates/Documents/GitHub/bigTimeESD/XYZAssociation/dist/javadoc/model/DBMemberRETURN.html)
 
+| Modifier and Type     | Method and Description             | Test name         |
+| --------------------- | ---------------------------------- | ----------------- |
+| `java.util.ArrayList` | `getMember(java.lang.String name)` | `testGetMember()` |
 
+Test (1) Result: Awaiting Github update for class update, error found name was being used rather than Id.
+
+
+
+
+
+## 
+
+## [DBPaymentINSERT](file:///C:/Users/Yates/Documents/GitHub/bigTimeESD/XYZAssociation/dist/javadoc/model/DBPaymentINSERT.html)
+
+## [DBPaymentRETURN](file:///C:/Users/Yates/Documents/GitHub/bigTimeESD/XYZAssociation/dist/javadoc/model/DBPaymentRETURN.html)
 
 ## [DBRegisterBean](file:///C:/Users/Yates/Documents/GitHub/bigTimeESD/XYZAssociation/dist/javadoc/model/DBRegisterBean.html)
 
