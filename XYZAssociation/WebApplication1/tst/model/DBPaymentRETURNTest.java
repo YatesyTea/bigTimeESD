@@ -51,6 +51,5 @@ public class DBPaymentRETURNTest {
         int result = instance.getPayment(mem_id).get(0).getId();
         
         assertEquals(expResult, result);
-    }
-    
+    }   
 }
