@@ -43,12 +43,12 @@
         }
 
         th, td {
-          text-align: left;
-          padding: 8px;
+          text-align: center;
+          padding: 4px;
           color: white;
         }
 
-        tr:nth-child(even){background-color: teal}
+        tr:nth-child{background-color: teal}
         
         </style>
         

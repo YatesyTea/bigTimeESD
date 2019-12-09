@@ -32,7 +32,7 @@ public class DBAllMemberRETURN {
             Class.forName("org.apache.derby.jdbc.ClientDriver");
             con = dbib.openConnection();
             state = con.createStatement();
-            rs = state.executeQuery("SELECT * FROM MEMBERS");
+            rs = state.executeQuery("SELECT * FROM MEMBERS WHERE STATUS='APPROVED'");
             
             while (rs.next()) {
                 

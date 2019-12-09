@@ -42,8 +42,8 @@
         }
 
         th, td {
-            text-align: left;
-            padding: 8px;
+            text-align: center;
+            padding: 4px;
             color: white
         }
 

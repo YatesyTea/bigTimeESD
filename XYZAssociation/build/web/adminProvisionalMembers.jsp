@@ -12,52 +12,52 @@
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <title>JSP Page</title>
-        
+
         <style>
-            
-        #textboxid
-        {   
-            text-align: center;
-            height:20px;
-            width:200px;
-            font-family: Verdana;
-            font-size:14pt;
-            color: teal;
-        }
-            
-        #textid
-        {
-            text-align: center;
-            font-family: Verdana;
-            font-size:14pt;
-            color: white;
-        }
-        
-        table {
-          border-collapse: collapse;
-          border-spacing: 0;
-          width: 100%;
-          border: 1px solid white;
-        }
 
-        th, td {
-          text-align: left;
-          padding: 8px;
-          color: white;
-        }
+            #textboxid
+            {   
+                text-align: center;
+                height:20px;
+                width:200px;
+                font-family: Verdana;
+                font-size:14pt;
+                color: teal;
+            }
 
-        tr:nth-child(even){background-color: teal}
-        
+            #textid
+            {
+                text-align: center;
+                font-family: Verdana;
+                font-size:14pt;
+                color: white;
+            }
+
+            table {
+                border-collapse: collapse;
+                border-spacing: 0;
+                width: 100%;
+                border: 1px solid white;
+            }
+
+            th, td {
+                text-align: center;
+                padding: 4px;
+                color: white;
+            }
+
+            tr:nth-child{background-color: teal}
+
         </style>
-        
+
     </head>
     <body style="background-color: teal">
         <h1 id="textid">Admin Provisional Members</h1>
-        
+
         <%
-            ArrayList<Member> member = (ArrayList<Member>)request.getAttribute("members");
+            ArrayList<Member> member = (ArrayList<Member>) request.getAttribute("members");
         %>
-        
+
         <div style="overflow-x:auto;">
             <table>
                 <tr>
@@ -69,8 +69,8 @@
                     <th>Status</th>
                     <th>Balance</th>
                 </tr>
-                
-                <% 
+
+                <%
                     for (int i = 0; i < member.size(); i++) {
                         out.println("<tr>");
                         out.println("<td>" + member.get(i).getId() + "</td>");
@@ -80,12 +80,28 @@
                         out.println("<td>" + member.get(i).getDor() + "</td>");
                         out.println("<td>" + member.get(i).getStatus() + "</td>");
                         out.println("<td>" + member.get(i).getBalance() + "</td>");
+                %>
+                <td><input id="button" type="button" onclick="submitIndex(<%%>);" value="Approve"/>
+                </td>
+
+                <script language="javascript">
+                    function submitIndex() 
+                    i = index.rowIndex;
+                        System.out.println("Bannana");
+                        alert(i);
+                        console.log("hi");
+                    }
+                    //out.println("<form action=\"AdminApproveMember.do\" method=\"post\"></form>");
+                </script> 
+                <%
                         out.println("</tr>");
+                        System.out.println("jdifojesisoeofj");
                     }
                 %>
-                
+
+
             </table>
         </div> 
-        
+
     </body>
 </html>

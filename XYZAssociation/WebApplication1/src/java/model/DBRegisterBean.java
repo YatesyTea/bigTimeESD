@@ -32,7 +32,7 @@ public class DBRegisterBean {
             PreparedStatement preparedStmt = con.prepareStatement("insert into users (ID, PASSWORD, STATUS)" + " values (?, ?, ?)");
             preparedStmt.setString(1, ID);
             preparedStmt.setString(2, password1);
-            preparedStmt.setString(3, "PENDING");
+            preparedStmt.setString(3, "APPLIED");
             preparedStmt.executeUpdate();
             preparedStmt = con.prepareStatement("insert into members (ID, NAME, ADDRESS, DOB, DOR, STATUS, BALANCE)" + " values (?, ?, ?, ?, ?, ?, ?)");
             preparedStmt.setString(1, ID);

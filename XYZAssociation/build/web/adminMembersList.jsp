@@ -41,12 +41,12 @@
         }
 
         th, td {
-          text-align: left;
-          padding: 8px;
+          text-align: center;
+          padding: 4px;
           color: white;
         }
 
-        tr:nth-child(even){background-color: teal}
+        tr:nth-child{background-color: teal}
         
         </style>
         
@@ -80,6 +80,7 @@
                         out.println("<td>" + member.get(i).getDor() + "</td>");
                         out.println("<td>" + member.get(i).getStatus() + "</td>");
                         out.println("<td>" + member.get(i).getBalance() + "</td>");
+                        out.println("<td><button onclick=\"submitIndex(this)\">Suspend Member</button></td>");
                         out.println("</tr>");
                     }
                 %>
