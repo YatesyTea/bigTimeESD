@@ -9,9 +9,11 @@
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <title>JSP Page</title>
+        <title>You Done Messed Up A A RON</title>
     </head>
     <body>
-        <h1>scrub BOI</h1>
+        <body style="background-color: teal">
+        <h1>You have entered an incorrect username/password</h1>
+        <h1 style="text-align:center; position:fixed; top:5px; right:5px;"><a id="textid" href="/XYZAssociation/index.html">Return to Log In Page</a></h1> 
     </body>
 </html>
