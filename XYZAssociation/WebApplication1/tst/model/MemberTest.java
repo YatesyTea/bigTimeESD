@@ -17,6 +17,7 @@ import static org.junit.Assert.*;
  * @author Yates
  */
 public class MemberTest {
+    private Member member;
     
     public MemberTest() {
     }
@@ -31,6 +32,9 @@ public class MemberTest {
     
     @Before
     public void setUp() {
+        System.out.println("== Set Up");
+        member = new Member("myId", "myName", "01 London Road, Littlemoore, Oxford",
+                "1999-01-01", "2019-11-25", "APPROVED", 120.00);
     }
     
     @After
@@ -43,12 +47,12 @@ public class MemberTest {
     @Test
     public void testGetId() {
         System.out.println("getId");
-        Member instance = new Member();
-        String expResult = "";
+        Member instance = member;
+        
+        String expResult = "myId";
         String result = instance.getId();
+        
         assertEquals(expResult, result);
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
     }
 
     /**
@@ -57,11 +61,15 @@ public class MemberTest {
     @Test
     public void testSetId() {
         System.out.println("setId");
-        String id = "";
-        Member instance = new Member();
+        Member instance = member;
+        
+        String id = "new Id";
         instance.setId(id);
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+        
+        String expResult = id;
+        String result = instance.getId();
+        
+        assertEquals(expResult,result);
     }
 
     /**
@@ -70,12 +78,12 @@ public class MemberTest {
     @Test
     public void testGetName() {
         System.out.println("getName");
-        Member instance = new Member();
-        String expResult = "";
+        Member instance = member;
+        
+        String expResult = "myName";
         String result = instance.getName();
+        
         assertEquals(expResult, result);
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
     }
 
     /**
@@ -84,11 +92,15 @@ public class MemberTest {
     @Test
     public void testSetName() {
         System.out.println("setName");
-        String name = "";
-        Member instance = new Member();
+        Member instance = member;
+        
+        String name = "new Name";
         instance.setName(name);
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+        
+        String expResult = "new Name";
+        String result = instance.getName();
+        
+        assertEquals(expResult,result);
     }
 
     /**
@@ -97,12 +109,12 @@ public class MemberTest {
     @Test
     public void testGetAddress() {
         System.out.println("getAddress");
-        Member instance = new Member();
-        String expResult = "";
+        Member instance = member;
+        
+        String expResult = "01 London Road, Littlemoore, Oxford";
         String result = instance.getAddress();
+        
         assertEquals(expResult, result);
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
     }
 
     /**
@@ -111,11 +123,15 @@ public class MemberTest {
     @Test
     public void testSetAddress() {
         System.out.println("setAddress");
-        String address = "";
-        Member instance = new Member();
+        Member instance = member;
+        
+        String address = "10 New Road, Hackney, London";
         instance.setAddress(address);
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+        
+        String expResult = address;
+        String result = instance.getAddress();
+        
+        assertEquals(expResult,result);
     }
 
     /**
@@ -124,12 +140,12 @@ public class MemberTest {
     @Test
     public void testGetDob() {
         System.out.println("getDob");
-        Member instance = new Member();
-        String expResult = "";
+        Member instance = member;
+        
+        String expResult = "1999-01-01";
         String result = instance.getDob();
+        
         assertEquals(expResult, result);
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
     }
 
     /**
@@ -138,11 +154,15 @@ public class MemberTest {
     @Test
     public void testSetDob() {
         System.out.println("setDob");
-        String dob = "";
-        Member instance = new Member();
+        Member instance = member;
+        
+        String dob = "2000-01-01";  
         instance.setDob(dob);
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+        
+        String expResult = dob;
+        String result = instance.getDob();
+        
+        assertEquals(expResult,result);
     }
 
     /**
@@ -151,12 +171,12 @@ public class MemberTest {
     @Test
     public void testGetDor() {
         System.out.println("getDor");
-        Member instance = new Member();
-        String expResult = "";
+        Member instance = member;
+        
+        String expResult = "2019-11-25";
         String result = instance.getDor();
+        
         assertEquals(expResult, result);
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
     }
 
     /**
@@ -165,11 +185,15 @@ public class MemberTest {
     @Test
     public void testSetDor() {
         System.out.println("setDor");
-        String dor = "";
-        Member instance = new Member();
+        Member instance = member;
+        
+        String dor = "2019-11-01";
         instance.setDor(dor);
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+        
+        String expResult = dor;
+        String result = instance.getDor();
+        
+        assertEquals(expResult,result);
     }
 
     /**
@@ -178,12 +202,12 @@ public class MemberTest {
     @Test
     public void testGetStatus() {
         System.out.println("getStatus");
-        Member instance = new Member();
-        String expResult = "";
+        Member instance = member;
+        
+        String expResult = "APPROVED";
         String result = instance.getStatus();
+        
         assertEquals(expResult, result);
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
     }
 
     /**
@@ -192,11 +216,15 @@ public class MemberTest {
     @Test
     public void testSetStatus() {
         System.out.println("setStatus");
-        String status = "";
-        Member instance = new Member();
+        Member instance = member;
+        
+        String status = "APPLIED";
         instance.setStatus(status);
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+        
+        String expResult = status;
+        String result = instance.getStatus();
+        
+        assertEquals(expResult,result);
     }
 
     /**
@@ -205,12 +233,12 @@ public class MemberTest {
     @Test
     public void testGetBalance() {
         System.out.println("getBalance");
-        Member instance = new Member();
-        double expResult = 0.0;
+        Member instance = member;
+        
+        double expResult = 120.00;
         double result = instance.getBalance();
-        assertEquals(expResult, result, 0.0);
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+        
+        assertEquals(expResult, result, 120.00);
     }
 
     /**
@@ -219,11 +247,15 @@ public class MemberTest {
     @Test
     public void testSetBalance() {
         System.out.println("setBalance");
-        double balance = 0.0;
-        Member instance = new Member();
+        Member instance = member;
+        
+        double balance = 100.00;
         instance.setBalance(balance);
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+        
+        double expResult = balance;
+        double result = instance.getBalance();
+        
+        assertEquals(expResult,result, 100.00);
     }
 
     /**
@@ -232,12 +264,14 @@ public class MemberTest {
     @Test
     public void testDisplay() {
         System.out.println("display");
-        Member instance = new Member();
-        String expResult = "";
+        Member instance = member;
+        
         String result = instance.display();
+        String expResult = "id: myId name: myName address: "
+                + "01 London Road, Littlemoore, Oxford dob: 1999-01-01 dor: "
+                + "2019-11-25 status: APPROVED balance: 120.0";                
+        
         assertEquals(expResult, result);
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
     }
     
 }

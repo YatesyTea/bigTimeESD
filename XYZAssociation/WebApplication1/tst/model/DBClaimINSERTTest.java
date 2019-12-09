@@ -43,15 +43,16 @@ public class DBClaimINSERTTest {
     @Test
     public void testMakeClaim() throws Exception {
         System.out.println("makeClaim");
+        DBClaimINSERT instance = new DBClaimINSERT();
+        
         String memID = "";
         String rationale = "";
         double amount = 0.0;
-        DBClaimINSERT instance = new DBClaimINSERT();
+        
         String expResult = "";
         String result = instance.makeClaim(memID, rationale, amount);
+        
         assertEquals(expResult, result);
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
     }
     
 }

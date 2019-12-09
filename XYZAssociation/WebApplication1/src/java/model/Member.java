@@ -83,6 +83,8 @@ public class Member {
     }
     
     public String display(){
-        return "id: " + this.id + "name:" + this.name + "address: " + this.address + "dob: " + this.dob + "dor: " + this.dor + "status: " + this.status + "balance: " + this.balance;
+        return "id: " + this.id + " name: " + this.name + " address: " 
+                + this.address + " dob: " + this.dob + " dor: " + this.dor 
+                + " status: " + this.status + " balance: " + this.balance;
     }
 }

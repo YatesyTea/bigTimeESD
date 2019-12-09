@@ -17,6 +17,7 @@ import static org.junit.Assert.*;
  * @author Yates
  */
 public class PaymentTest {
+    private Payment payment;
     
     public PaymentTest() {
     }
@@ -31,10 +32,13 @@ public class PaymentTest {
     
     @Before
     public void setUp() {
+        System.out.println("== Set Up");
+        payment = new Payment(123, "Member_Id", "FEE", 200, "2019-27-10");
     }
     
     @After
     public void tearDown() {
+        payment = null;
     }
 
     /**
@@ -43,12 +47,12 @@ public class PaymentTest {
     @Test
     public void testGetId() {
         System.out.println("getId");
-        Payment instance = null;
-        int expResult = 0;
+        Payment instance = payment;
+        
+        int expResult = 123;
         int result = instance.getId();
+        
         assertEquals(expResult, result);
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
     }
 
     /**
@@ -57,11 +61,15 @@ public class PaymentTest {
     @Test
     public void testSetId() {
         System.out.println("setId");
+        Payment instance = payment;
+        
         int id = 0;
-        Payment instance = null;
         instance.setId(id);
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+        
+        int expResult = id;
+        int result = instance.getId();
+        
+        assertEquals(expResult,result);
     }
 
     /**
@@ -70,12 +78,12 @@ public class PaymentTest {
     @Test
     public void testGetMem_id() {
         System.out.println("getMem_id");
-        Payment instance = null;
-        String expResult = "";
+        Payment instance = payment;
+        
+        String expResult = "Member_Id";
         String result = instance.getMem_id();
+        
         assertEquals(expResult, result);
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
     }
 
     /**
@@ -84,11 +92,15 @@ public class PaymentTest {
     @Test
     public void testSetMem_id() {
         System.out.println("setMem_id");
+        Payment instance = payment;
+        
         String mem_id = "";
-        Payment instance = null;
         instance.setMem_id(mem_id);
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+        
+        String expResult = mem_id;
+        String result = instance.getMem_id();
+        
+        assertEquals(expResult,result);
     }
 
     /**
@@ -97,12 +109,12 @@ public class PaymentTest {
     @Test
     public void testGetType_of_payment() {
         System.out.println("getType_of_payment");
-        Payment instance = null;
-        String expResult = "";
+        Payment instance = payment;
+        
+        String expResult = "FEE";
         String result = instance.getType_of_payment();
+        
         assertEquals(expResult, result);
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
     }
 
     /**
@@ -111,11 +123,15 @@ public class PaymentTest {
     @Test
     public void testSetType_of_payment() {
         System.out.println("setType_of_payment");
-        String type_of_payment = "";
-        Payment instance = null;
+        Payment instance = payment;
+        
+        String type_of_payment = "MONTHLY";      
         instance.setType_of_payment(type_of_payment);
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+        
+        String expResult = type_of_payment;
+        String result = instance.getType_of_payment();
+        
+        assertEquals(expResult,result);
     }
 
     /**
@@ -124,12 +140,12 @@ public class PaymentTest {
     @Test
     public void testGetAmount() {
         System.out.println("getAmount");
-        Payment instance = null;
-        int expResult = 0;
+        Payment instance = payment;
+        
+        int expResult = 200;
         int result = instance.getAmount();
+        
         assertEquals(expResult, result);
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
     }
 
     /**
@@ -138,11 +154,15 @@ public class PaymentTest {
     @Test
     public void testSetAmount() {
         System.out.println("setAmount");
-        int amount = 0;
-        Payment instance = null;
+        Payment instance = payment;
+        
+        int amount = 150;    
         instance.setAmount(amount);
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+        
+        int expResult = amount;
+        int result = instance.getAmount();
+        
+        assertEquals(expResult,result);
     }
 
     /**
@@ -151,12 +171,12 @@ public class PaymentTest {
     @Test
     public void testGetDate() {
         System.out.println("getDate");
-        Payment instance = null;
-        String expResult = "";
+        Payment instance = payment;
+        
+        String expResult = "2019-27-10";
         String result = instance.getDate();
+        
         assertEquals(expResult, result);
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
     }
 
     /**
@@ -165,11 +185,14 @@ public class PaymentTest {
     @Test
     public void testSetDate() {
         System.out.println("setDate");
-        String date = "";
-        Payment instance = null;
+        Payment instance = payment;
+        
+        String date = "2019-01-01";
         instance.setDate(date);
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+        
+        String expResult = date;
+        String result = instance.getDate();
+        assertEquals(expResult,result);
     }
     
 }
