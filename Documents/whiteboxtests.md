@@ -31,6 +31,12 @@ Test Result:
 
 ![claimTestSetResult](whiteboxtests.assets/claimTestSetResult.PNG)
 
+## [DBAllClaimRETURN](file:///C:/Users/Yates/Documents/GitHub/bigTimeESD/XYZAssociation/dist/javadoc/model/DBAllClaimRETURN.html)
+
+## [DBAllMemberRETURN](file:///C:/Users/Yates/Documents/GitHub/bigTimeESD/XYZAssociation/dist/javadoc/model/DBAllMemberRETURN.html)
+
+## [DBAppliedMemberRETURN](file:///C:/Users/Yates/Documents/GitHub/bigTimeESD/XYZAssociation/dist/javadoc/model/DBAppliedMemberRETURN.html)
+
 ## [DBAuthenticatorBean](file:///C:/Users/Yates/Documents/GitHub/bigTimeESD/XYZAssociation/dist/javadoc/model/DBAuthenticatorBean.html)
 
 | Modifier and Type | Method and Description                                | Test Name                     |
@@ -64,7 +70,11 @@ Test Result:
 
 ## [DBMemberRETURN](file:///C:/Users/Yates/Documents/GitHub/bigTimeESD/XYZAssociation/dist/javadoc/model/DBMemberRETURN.html)
 
+## [DBMemberRETURN](file:///C:/Users/Yates/Documents/GitHub/bigTimeESD/XYZAssociation/dist/javadoc/model/DBMemberRETURN.html)
 
+## [DBPaymentINSERT](file:///C:/Users/Yates/Documents/GitHub/bigTimeESD/XYZAssociation/dist/javadoc/model/DBPaymentINSERT.html)
+
+## [DBPaymentRETURN](file:///C:/Users/Yates/Documents/GitHub/bigTimeESD/XYZAssociation/dist/javadoc/model/DBPaymentRETURN.html)
 
 ## [DBRegisterBean](file:///C:/Users/Yates/Documents/GitHub/bigTimeESD/XYZAssociation/dist/javadoc/model/DBRegisterBean.html)
 

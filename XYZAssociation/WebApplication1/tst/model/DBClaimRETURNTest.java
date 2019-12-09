@@ -18,6 +18,7 @@ import static org.junit.Assert.*;
  * @author Yates
  */
 public class DBClaimRETURNTest {
+    DBClaimRETURN dbCR;
     
     public DBClaimRETURNTest() {
     }
@@ -32,25 +33,42 @@ public class DBClaimRETURNTest {
     
     @Before
     public void setUp() {
+        dbCR = new DBClaimRETURN();
     }
     
     @After
     public void tearDown() {
+        dbCR = null;
     }
 
     /**
      * Test of getClaims method, of class DBClaimRETURN.
      */
     @Test
-    public void testGetClaims() {
-        System.out.println("getClaims");
-        String name = "";
-        DBClaimRETURN instance = new DBClaimRETURN();
+    public void testValidGetClaims() {
+        System.out.println("get Valid Claims");
+        DBClaimRETURN instance = dbCR;   
+        
+        String name = "me-aydin";
+        String  expResult = "change mirror";
+        String result = instance.getClaims(name).get(0).getRationale();
+        
+        assertEquals(expResult, result);
+    }
+    
+     /**
+     * Test of getClaims method, of class DBClaimRETURN.
+     */
+    @Test
+    public void testInvalidGetClaims() {
+        System.out.println("get Invalid Claims");
+        DBClaimRETURN instance = dbCR;   
+        
+        String name = "totallyrealname.com";
         ArrayList<Claim> expResult = null;
         ArrayList<Claim> result = instance.getClaims(name);
+        
         assertEquals(expResult, result);
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
     }
     
 }
