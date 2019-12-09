@@ -2,8 +2,6 @@
 
 [toc]
 
-# Model
-
 ## [Claim](file:///C:/Users/Yates/Documents/GitHub/bigTimeESD/XYZAssociation/dist/javadoc/model/Claim.html)
 
 | Method                     | Test Name            |
@@ -109,15 +107,20 @@ Test (1) Result: Awaiting Github update for class update, error found name was b
 
 
 
-## 
-
 ## [DBPaymentINSERT](file:///C:/Users/Yates/Documents/GitHub/bigTimeESD/XYZAssociation/dist/javadoc/model/DBPaymentINSERT.html)
 
 ## [DBPaymentRETURN](file:///C:/Users/Yates/Documents/GitHub/bigTimeESD/XYZAssociation/dist/javadoc/model/DBPaymentRETURN.html)
 
 ## [DBRegisterBean](file:///C:/Users/Yates/Documents/GitHub/bigTimeESD/XYZAssociation/dist/javadoc/model/DBRegisterBean.html)
 
+| Modifier and Type  | Method and Description                                       | Test Name                    |
+| ------------------ | ------------------------------------------------------------ | ---------------------------- |
+| `java.lang.String` | `createAccount(java.lang.String name, java.lang.String password1, java.lang.String password2, java.lang.String address, java.lang.String dob)` | `testCreate ValidAccount()`  |
+| `java.lang.String` | `createAccount(java.lang.String name, java.lang.String password1, java.lang.String password2, java.lang.String address, java.lang.String dob)` | `testCreateInvalidAccount()` |
 
+Test Result:
+
+![image-20191209133453261](whiteboxtests.assets/image-20191209133453261.png)
 
 ## [Member](file:///C:/Users/Yates/Documents/GitHub/bigTimeESD/XYZAssociation/dist/javadoc/model/Member.html)
 
@@ -179,51 +182,5 @@ Test Set Result:
 | `setPassword(java.lang.String password)` |`testSetPassword()`	|
 | `setStatus(java.lang.String status)` |`testSetStatus()`	|
 
-# Controller
 
-## [AdminClaimsListController](file:///C:/Users/Yates/Documents/GitHub/bigTimeESD/XYZAssociation/dist/javadoc/controller/AdminClaimsListController.html)
-
-
-
-## [AdminMembersListController](file:///C:/Users/Yates/Documents/GitHub/bigTimeESD/XYZAssociation/dist/javadoc/controller/AdminMembersListController.html)
-
-
-
-## [AdminOutstandingBalanceController](file:///C:/Users/Yates/Documents/GitHub/bigTimeESD/XYZAssociation/dist/javadoc/controller/AdminOutstandingBalanceController.html)
-
-
-
-## [AdminProvisionalMembersController](file:///C:/Users/Yates/Documents/GitHub/bigTimeESD/XYZAssociation/dist/javadoc/controller/AdminProvisionalMembersController.html)
-
-
-
-## [AdminTurnoverReportsController](file:///C:/Users/Yates/Documents/GitHub/bigTimeESD/XYZAssociation/dist/javadoc/controller/AdminTurnoverReportsController.html)
-
-
-
-## [AuthenticateUser](file:///C:/Users/Yates/Documents/GitHub/bigTimeESD/XYZAssociation/dist/javadoc/controller/AuthenticateUser.html)
-
-
-
-## [CheckCookie](file:///C:/Users/Yates/Documents/GitHub/bigTimeESD/XYZAssociation/dist/javadoc/controller/CheckCookie.html)
-
-
-
-## [MakeClaimController](file:///C:/Users/Yates/Documents/GitHub/bigTimeESD/XYZAssociation/dist/javadoc/controller/MakeClaimController.html)
-
-
-
-## [MakePaymentController](file:///C:/Users/Yates/Documents/GitHub/bigTimeESD/XYZAssociation/dist/javadoc/controller/MakePaymentController.html)
-
-
-
-## [RegistrationController](file:///C:/Users/Yates/Documents/GitHub/bigTimeESD/XYZAssociation/dist/javadoc/controller/RegistrationController.html)
-
-
-
-## [ShowClaimsAndPayments](file:///C:/Users/Yates/Documents/GitHub/bigTimeESD/XYZAssociation/dist/javadoc/controller/ShowClaimsAndPayments.html)
-
-
-
-## [SubmitClaimController](file:///C:/Users/Yates/Documents/GitHub/bigTimeESD/XYZAssociation/dist/javadoc/controller/SubmitClaimController.html)
 
