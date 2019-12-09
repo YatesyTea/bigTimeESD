@@ -46,21 +46,23 @@ What is it meant to take and reject?
 ### Table for Test Plan
 
 | Feature Name | Input                                               | Expected Output              | Actual Output | Notes |
-| ------------ | --------------------------------------------------- | ---------------------------- | ------------- | ----- |
-| Login Page   | admin username<br />admin password<br />click login | Displays the admin dashboard |               |       |
-| Login Page   | standard username<br />standard pw<br />click login | Displays the user dashboard  |               |       |
-| Session time out           |                                                     |                              |               |       |
-|              |                                                     |                              |               |       |
-|              |                                                     |                              |               |       |
-|              |                                                     |                              |               |       |
-|              |                                                     |                              |               |       |
-|              |                                                     |                              |               |       |
-|              |                                                     |                              |               |       |
-|              |                                                     |                              |               |       |
-|              |                                                     |                              |               |       |
-|              |                                                     |                              |               |       |
-|              |                                                     |                              |               |       |
-|              |                                                     |                              |               |       |
+| :----------- | --------------------------------------------------- | ---------------------------- | ------------- | ----- |
+| Login Page   | admin username<br />admin password<br />click login | Displays the admin dashboard | ![Admin-dashboard](testplan.assets/Admin-dashboard.png) |       |
+| Login Page   | standard username<br />standard password<br />click login | Displays the user dashboard  |               |       |
+| Session time out           | no input required | session expires after 20 minutes |               |       |
+| Create an account | Enter full name<br />Enter Address<br />Enter date of birth<br />Enter password then re enter password again<br />password have to match<br />click sign up | New account to be Created. |               |       |
+| Trying to log in as a non approved member | standard username<br />standard password<br />click login | Messege appear on screen:none approved member | | |
+| member dashboard functions: 1.Check outstanding balance | Clik on outstanding balance | Balance should be shown on the screen | | |
+| 2.Make a payment | Click on make payment |                              |               |       |
+| 3.Submit a claim | click on make a claim<br />Enter rationale<br />Enter cost, cost can't be a negative number and has to be 2 decimal | Claim should be submitted if the cost number is enterd correctly |               |       |
+| Admin dashboard functions: 1.List all members |                                                     |                              |               |       |
+| 2.List all outstanding balances |                                                     |                              |               |       |
+| 3.List all claims |                                                     |                              |               |       |
+| 4.List all provisional member applications |                                                     |                              |               |       |
+| 5.Process individual claims |                                                     |                              |               |       |
+| 6.Process membership applications and upgrade if payment is made |                                                     |                              |               |       |
+| 7.Suspend/Resume membership |                                                     |                              |               |       |
+| 8.Report annual turnover including total income and total pay-outs |                                                     |                              |               |       |
 |              |                                                     |                              |               |       |
 |              |                                                     |                              |               |       |
 |              |                                                     |                              |               |       |
