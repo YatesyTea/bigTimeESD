@@ -55,6 +55,9 @@ public class SubmitClaimController extends HttpServlet {
     protected void doGet(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
         processRequest(request, response);
+        
+        RequestDispatcher view = request.getRequestDispatcher("submitClaim.jsp");
+        view.forward(request, response);
     }
 
     /**
@@ -87,7 +90,7 @@ public class SubmitClaimController extends HttpServlet {
             Logger.getLogger(SubmitClaimController.class.getName()).log(Level.SEVERE, null, ex);
         }
         
-        RequestDispatcher view = request.getRequestDispatcher("loginView.jsp");
+        RequestDispatcher view = request.getRequestDispatcher("submitClaim.jsp");
         view.forward(request, response);
     }
 

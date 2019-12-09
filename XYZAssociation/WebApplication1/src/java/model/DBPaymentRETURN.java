@@ -18,24 +18,24 @@ import java.sql.ResultSetMetaData;
 import java.sql.SQLException;
 import java.sql.Statement;
 
-public class DBClaimRETURN {
+public class DBPaymentRETURN {
 
     private Connection con;
     private Statement state;
     private ResultSet rs;
 
-    public ArrayList<Claim> getClaims(String name) {
-        ArrayList<Claim> result = new ArrayList<Claim>();
+    public ArrayList<Payment> getPayment(String name) {
+        ArrayList<Payment> result = new ArrayList<>();
         DBConnectorBean dbib = new DBConnectorBean();
         
         try {
             Class.forName("org.apache.derby.jdbc.ClientDriver");
             con = dbib.openConnection();
             state = con.createStatement();
-            rs = state.executeQuery("SELECT * FROM CLAIMS WHERE MEM_ID = '" + name + "'");
+            rs = state.executeQuery("SELECT * FROM PAYMENTS WHERE MEM_ID = '" + name + "'");
             
             while (rs.next()) {
-                result.add(new Claim(Integer.parseInt(rs.getString(1)), rs.getString(2), rs.getString(3), rs.getString(4), rs.getString(5), Double.parseDouble(rs.getString(6))));
+                result.add(new Payment(Integer.parseInt(rs.getString(1)), rs.getString(2), rs.getString(3), Integer.parseInt(rs.getString(4)), rs.getString(5)));
           
             }
             rs.close();

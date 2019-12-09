@@ -49,11 +49,11 @@
             out.print(Double.toString(balance));
         %>
 
-        <form method="post" action="MakePaymentController.do"><p style="text-align:center">
+        <form method="post" action="SubmitPaymentController.do"><p style="text-align:center">
                 <input id="textboxid" type="SUBMIT" value="Make Payment" style="align-self: center">
             </p></form>
 
-        <form method="post" action="MakeClaimController.do"><p style="text-align:center">
+        <form method="post" action="SubmitClaimController.do"><p style="text-align:center">
                 <input id="textboxid" type="SUBMIT" value="Submit Claim" style="align-self: center">
             </p></form>
 

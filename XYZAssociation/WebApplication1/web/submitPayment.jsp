@@ -29,6 +29,17 @@
     </style>
     </head>
     <body style="background-color: teal">
-        <h1>Make Payment</h1>
+        <h1 id="textid">Make Payment</h1>
+        
+        <p>
+        <form method="post" action="SubmitPaymentController.do"><p style="text-align:center">
+                <br /><label id="textid">Payment Type:</label><br />
+                <input id="textboxid" type="text" name="payment">
+                <br /><label id="textid">Cost (£): </label><br />
+                <input id="textboxid" type="number" name="cost" min="0" step="0.01" value="0.00"><br />
+                <br><input type="SUBMIT" value="Submit Claim" style="color: royalblue">
+            </p></form>
+    </p>
+        
     </body>
 </html>

@@ -37,12 +37,13 @@
           border-collapse: collapse;
           border-spacing: 0;
           width: 100%;
-          border: 1px solid #ddd;
+          border: 1px solid white;
         }
 
         th, td {
           text-align: left;
           padding: 8px;
+          color: white;
         }
 
         tr:nth-child(even){background-color: teal}

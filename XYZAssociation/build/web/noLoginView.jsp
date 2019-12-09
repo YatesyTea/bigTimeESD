@@ -12,6 +12,6 @@
         <title>JSP Page</title>
     </head>
     <body>
-        <h1>Error 404: skill not found</h1>
+        <h1>No Login</h1>
     </body>
 </html>
