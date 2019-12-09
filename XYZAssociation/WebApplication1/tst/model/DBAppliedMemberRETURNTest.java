@@ -42,14 +42,15 @@ public class DBAppliedMemberRETURNTest {
      * Test of getMember method, of class DBAppliedMemberRETURN.
      */
     @Test
-    public void testGetMember() {
+    public void testGetAllAppliedMember() {
         System.out.println("getMember");
         DBAppliedMemberRETURN instance = new DBAppliedMemberRETURN();
-        ArrayList<Member> expResult = null;
-        ArrayList<Member> result = instance.getMember();
+        
+        int expResult = 1;
+        ArrayList<Member> temp_list = instance.getMember();
+        int result = temp_list.size();
+        
         assertEquals(expResult, result);
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
     }
     
 }

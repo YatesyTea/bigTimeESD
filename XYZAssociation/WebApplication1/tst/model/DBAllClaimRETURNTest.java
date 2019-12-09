@@ -50,7 +50,7 @@ public class DBAllClaimRETURNTest {
         DBAllClaimRETURN instance = dbaCR;
         
         String expResult = "change mirror";
-        String result = instance.getClaims().get(0).getRationale();;
+        String result = instance.getClaims().get(0).getRationale();
         
         assertEquals(expResult, result);
     }

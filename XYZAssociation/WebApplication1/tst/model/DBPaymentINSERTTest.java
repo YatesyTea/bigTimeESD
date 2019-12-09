@@ -43,16 +43,17 @@ public class DBPaymentINSERTTest {
     @Test
     public void testMakePayment() throws Exception {
         System.out.println("makePayment");
-        int ID = 0;
-        String memID = "";
-        String typeOfPayment = "";
-        int amount = 0;
         DBPaymentINSERT instance = new DBPaymentINSERT();
-        String expResult = "";
+        
+        int ID = 25;
+        String memID = "me-aydin";
+        String typeOfPayment = "FEE";
+        int amount = 200;
+        
+        
+        String expResult = "A";
         String result = instance.makePayment(ID, memID, typeOfPayment, amount);
         assertEquals(expResult, result);
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
     }
     
 }

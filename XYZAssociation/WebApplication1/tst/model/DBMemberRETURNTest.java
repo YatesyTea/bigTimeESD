@@ -44,13 +44,13 @@ public class DBMemberRETURNTest {
     @Test
     public void testGetMember() {
         System.out.println("getMember");
-        String name = "";
         DBMemberRETURN instance = new DBMemberRETURN();
-        ArrayList<Member> expResult = null;
-        ArrayList<Member> result = instance.getMember(name);
+        
+        String id = "e-simons";
+        String expResult = "Edward Simons";
+        String result = instance.getMember(id).get(0).getName();
+        
         assertEquals(expResult, result);
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
     }
     
 }
