@@ -57,7 +57,7 @@ What is it meant to take and reject?
 | 3.Submit a claim | Click on make a claim<br />enter claim<br />enter value<br /> | Claim should be submitted if the cost number is enterd correctly | ![successful-claim](testplan.assets/successful-claim.png) |       |
 | 3.1 value can not be less than 0 (no negative value) | enter a value | if value is less than 0  it will reject the value | ![reject-value](testplan.assets/reject-value.png) | |
 | 3.2 value has to be 2 decimal points | enter a value | if value has more than 2 decimal points it will reject value | ![reject-value2](testplan.assets/reject-value2.png) | |
-| Admin dashboard functions: 1.List all members | click on  mebmers list button | list of all members should display on screen | ![list all members](testplan.assets/list all members.png) |       |
+| Admin dashboard functions: 1.List all members | click on  mebmers list button | list of all members should display on screen | ![list-all-members](testplan.assets/list-all-members.png) |       |
 | 2.List all outstanding balances |                                                     |                              | Doesn't work |       |
 | 3.List all claims | click onl claims list button | list of all claims should display on screen | ![list all claims](testplan.assets/list all claims.png) |       |
 | 4.List all provisional members | click on provisional members botton | list of all provisional members should display on screen | ![list all provisional members](testplan.assets/list all provisional members.png) |       |
