@@ -35,7 +35,7 @@ public class DBPaymentRETURN {
             rs = state.executeQuery("SELECT * FROM PAYMENTS WHERE MEM_ID = '" + name + "'");
             
             while (rs.next()) {
-                result.add(new Payment(Integer.parseInt(rs.getString(1)), rs.getString(2), rs.getString(3), Integer.parseInt(rs.getString(4)), rs.getString(5)));
+                result.add(new Payment(Integer.parseInt(rs.getString(1)), rs.getString(2), rs.getString(3), Double.parseDouble(rs.getString(4)), rs.getString(5)));
           
             }
             rs.close();

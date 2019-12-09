@@ -13,10 +13,10 @@ public class Payment {
     private int id;
     private String mem_id;
     private String type_of_payment;
-    private int amount;
+    private double amount;
     private String date;
 
-    public Payment(int id, String mem_id, String type_of_payment, int amount, String date) {
+    public Payment(int id, String mem_id, String type_of_payment, double amount, String date) {
         this.id = id;
         this.mem_id = mem_id;
         this.type_of_payment = type_of_payment;
@@ -48,20 +48,20 @@ public class Payment {
         this.type_of_payment = type_of_payment;
     }
 
-    public int getAmount() {
-        return amount;
-    }
-
-    public void setAmount(int amount) {
-        this.amount = amount;
-    }
-
     public String getDate() {
         return date;
     }
 
     public void setDate(String date) {
         this.date = date;
+    }
+
+    public double getAmount() {
+        return amount;
+    }
+
+    public void setAmount(double amount) {
+        this.amount = amount;
     }
     
 }

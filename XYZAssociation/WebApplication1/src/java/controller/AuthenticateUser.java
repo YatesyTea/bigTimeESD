@@ -86,6 +86,11 @@ public class AuthenticateUser extends HttpServlet {
             request.setAttribute("balance", balance);
             view = request.getRequestDispatcher("loginView.jsp");
         } else if (user.getStatus().equals("PENDING")) {
+            Member member = new Member();
+            member = dbmb.getMember(name).get(0);
+            double balance = member.getBalance();
+            session.setAttribute("member", member);
+            request.setAttribute("balance", balance);
             view = request.getRequestDispatcher("userView.jsp");
         } else {
             view = request.getRequestDispatcher("noLoginView.jsp");
