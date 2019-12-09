@@ -44,13 +44,13 @@ public class DBPaymentRETURNTest {
     @Test
     public void testGetPayment() {
         System.out.println("getPayment");
-        String name = "";
         DBPaymentRETURN instance = new DBPaymentRETURN();
-        ArrayList<Payment> expResult = null;
-        ArrayList<Payment> result = instance.getPayment(name);
+        
+        String mem_id = "e-simons";
+        int expResult = 0;
+        int result = instance.getPayment(mem_id).get(0).getId();
+        
         assertEquals(expResult, result);
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
     }
     
 }
